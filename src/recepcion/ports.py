@@ -46,7 +46,7 @@ class LecturaNormalizada:
     «sin dato»; con batería el VOC llega en 0 y el adaptador ya lo pasa a None.
     """
 
-    sensor_id: int
+    sensor_id: int  # 0 si el sensor todavía no existe (la última lectura del alta)
     hora_local: datetime  # sin zona, hora de Zacatecas
     hora_nube: str  # tal cual la dio la nube (texto UTC+8 o segundos Unix)
     ruta: Ruta
