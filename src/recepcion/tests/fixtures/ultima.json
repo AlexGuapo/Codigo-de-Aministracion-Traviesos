@@ -1,0 +1,12 @@
+{
+ "code": 200,
+ "msg": "OK",
+ "data": {
+  "dataToken": "tokendeprueba1234",
+  "dataType": "string",
+  "name": "raw",
+  "value": "{\\\"sen55\\\":{\\\"pm1.0\\\":2.5,\\\"pm2.5\\\":3.2999999523162842,\\\"pm4.0\\\":3.9000000953674316,\\\"pm10.0\\\":4.0999999046325684,\\\"humidity\\\":50.869998931884766,\\\"temperature\\\":24.239999771118164,\\\"voc\\\":0,\\\"nox\\\":null},\\\"scd40\\\":{\\\"co2\\\":431,\\\"humidity\\\":49.265277862548828,\\\"temperature\\\":24.391164779663086},\\\"rtc\\\":{\\\"sleep_interval\\\":1800},\\\"profile\\\":{\\\"nickname\\\":\\\"Aparato de prueba\\\"}}",
+  "createTime": "1735711200",
+  "updateTime": "1791053592"
+ }
+}
