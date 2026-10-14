@@ -1,0 +1,54 @@
+{
+  "_nota": "Registro ARTIFICIAL (no es una lectura real). Prueba el segundo formato del valor (RT-003, IS-01.1): firmware v0.2.0 manda 'value' como objeto con dataType 'dict'; los campos internos sen55/scd40/rtc/profile no cambian respecto a v0.1.x. Formato tomado de la investigación del sensor (4.3) y de AboutEzdataRawData.md del firmware m5stack/AirQUserDemo (commit a2abd67, 09/06/2026). Ningún sensor de la clienta usa este formato. Campos de hora como en las filas reales del historial (SPK-011, 10/10): createTime = alta del sensor en la nube (igual en todas las filas; aquí, una fecha inventada) y updateTime = hora en que la nube recibió la lectura, en UTC+8. Las filas reales también traen el dataToken; aquí se omite.",
+  "registro": {
+    "dataType": "dict",
+    "name": "raw",
+    "value": {
+      "sen55": {
+        "pm1.0": 3.5,
+        "pm2.5": 3.7,
+        "pm4.0": 4.1,
+        "pm10.0": 4.3,
+        "humidity": 36.55,
+        "temperature": 36.03,
+        "voc": 0,
+        "nox": null
+      },
+      "scd40": {
+        "co2": 751,
+        "humidity": 34.54,
+        "temperature": 37.18
+      },
+      "rtc": {
+        "sleep_interval": 1800
+      },
+      "profile": {
+        "nickname": "Sensor de prueba"
+      }
+    },
+    "createTime": "2025-01-01 00:00:00",
+    "updateTime": "2026-09-27 02:18:11"
+  },
+  "esperado": {
+    "formato_valor": "objeto",
+    "hora_local": "2026-09-26T12:18:11-06:00",
+    "sleep_interval_s": 1800,
+    "sin_dato": [
+      "voc",
+      "nox"
+    ],
+    "variables": {
+      "pm1_0": 3.5,
+      "pm2_5": 3.7,
+      "pm4_0": 4.1,
+      "pm10_0": 4.3,
+      "co2": 751,
+      "temperatura_sen55": 36.03,
+      "humedad_sen55": 36.55,
+      "temperatura_scd40": 37.18,
+      "humedad_scd40": 34.54,
+      "voc": null,
+      "nox": null
+    }
+  }
+}
