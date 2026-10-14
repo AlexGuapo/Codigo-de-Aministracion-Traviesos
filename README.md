@@ -135,10 +135,9 @@ Traviesos.py/
 ├── templates/                   # base.html, menú, páginas de error
 ├── static/                      # vendor/ (Bootstrap, HTMX, Chart.js), css/, js/
 ├── scripts/                     # (después) respaldo y restauración
-├── tests/
-│   ├── datos/                   # datos de prueba compartidos (lecturas reales de un sensor + casos de borde)
-│   └── integracion/             # pruebas de punta a punta
-└── docs/                        # diagramas
+└── tests/
+    ├── datos/                   # datos de prueba compartidos (lecturas reales de un sensor + casos de borde)
+    └── integracion/             # pruebas de punta a punta
 ```
 
 Dentro de cada app, cuando se cree, va lo de la tabla de capas: `models.py`, `services.py`, `selectors.py`, `views.py`, `urls.py`, `forms.py`, `jobs.py`, `templates/<app>/`, `management/commands/` y `tests/`.
