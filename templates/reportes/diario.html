@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Reporte diario · SARRCA{% endblock %}
+
+{% block contenido %}
+<div>
+  <h1 class="titulo-pagina">Reportes</h1>
+  <p class="subtitulo">Calculados con la NOM-025-SSA1-2021. Cada sensor se calcula por separado.</p>
+</div>
+
+<nav class="pestanas" aria-label="Tipo de reporte">
+  <a href="/reportes/diario/" aria-current="page">Diario</a>
+  <a href="/reportes/mensual/">Mensual</a>
+</nav>
+
+<form class="filtros" method="get" action="/reportes/diario/">
+  <label class="campo">Día
+    <input type="date" name="fecha" value="{{ dia|date:'Y-m-d' }}">
+  </label>
+  <fieldset class="grupo-sensores">
+    <legend>Sensores</legend>
+    <div class="opciones">
+      {% for nombre in sensores %}
+      <label class="opcion"><input type="checkbox" name="sensores" value="{{ nombre }}" checked>{{ nombre }}</label>
+      {% endfor %}
+    </div>
+  </fieldset>
+  <button type="submit" class="boton boton-primario">Ver reporte</button>
+</form>
+
+<section class="tarjeta" aria-labelledby="titulo-reporte">
+  <div class="encabezado-reporte">
+    <h2 id="titulo-reporte">Reporte diario · {{ titulo_dia }}</h2>
+    <span class="nota">Hora local</span>
+  </div>
+
+  {% if es_ejemplo %}
+  <div class="aviso">Gráficas con lecturas de ejemplo: todavía no se leen las lecturas guardadas.</div>
+  {% endif %}
+
+  <div class="rejilla-graficas">
+    {% for grafica in graficas %}
+    <figure class="grafica">
+      <figcaption>
+        <span class="grafica-variable">{{ grafica.etiqueta }}</span>
+        <span class="grafica-unidad">{{ grafica.unidad }} · cada lectura del día</span>
+      </figcaption>
+      <div class="grafica-lienzo">
+        <canvas id="grafica-{{ grafica.variable }}" role="img" aria-label="{{ grafica.etiqueta }} de cada sensor el {{ titulo_dia }}, de 00:00 a 23:59"></canvas>
+      </div>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
+
+{{ graficas|json_script:"series" }}
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'vendor/chartjs/chart.umd.min.js' %}"></script>
+<script src="{% static 'js/graficas.js' %}"></script>
+{% endblock %}

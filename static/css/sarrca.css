@@ -1,0 +1,398 @@
+/* Colores, tipografía y estructura de la plantilla base de SARRCA. */
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../vendor/ibm-plex-sans/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../vendor/ibm-plex-sans/ibm-plex-sans-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../vendor/ibm-plex-sans/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
+}
+
+:root {
+  --fondo: #f6f7f5;
+  --superficie: #ffffff;
+  --texto: #1a2420;
+  --texto-suave: #55615c;
+  --texto-medio: #3f4a46;
+  --borde: #d8ddd9;
+  --borde-control: #b9c3bf;
+  --borde-tenue: #e8ecea;
+  --primario: #0e5f58;
+  --primario-oscuro: #0b4a44;
+  --primario-claro: #e3efec;
+  --aviso-fondo: #fff1d6;
+  --aviso-texto: #6b4500;
+  --pie: #eef1ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--primario-oscuro);
+}
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado */
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 14px 28px;
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--texto);
+}
+.marca-nombre {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.marca-lema {
+  display: block;
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.usuario-datos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.usuario-rol {
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+
+/* Cuerpo: menú y contenido */
+.cuerpo {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.menu {
+  flex: 1 1 230px;
+  max-width: 100%;
+  background: var(--superficie);
+  border-right: 1px solid var(--borde);
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.menu a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--texto);
+}
+.menu a:hover {
+  background: var(--fondo);
+}
+.menu a[aria-current="page"] {
+  color: var(--primario-oscuro);
+  background: var(--primario-claro);
+  font-weight: 500;
+}
+.contenido {
+  flex: 999 1 560px;
+  min-width: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Pie con la leyenda de datos no oficiales */
+.pie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  padding: 14px 28px;
+  background: var(--pie);
+  border-top: 1px solid var(--borde);
+  font-size: 13px;
+  color: var(--texto-medio);
+}
+.pie-leyenda {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Piezas comunes */
+.titulo-pagina {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+.subtitulo {
+  margin: 0;
+  color: var(--texto-suave);
+}
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.nota {
+  margin: 0;
+  font-size: 13px;
+  color: var(--texto-suave);
+}
+.aviso {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--aviso-fondo);
+  color: var(--aviso-texto);
+  font-size: 14px;
+}
+.boton {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--borde-control);
+  border-radius: 8px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.boton-primario {
+  background: var(--primario);
+  border-color: var(--primario);
+  color: #ffffff;
+}
+
+/* Pestañas */
+.pestanas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px;
+  background: var(--borde-tenue);
+  border-radius: 10px;
+  align-self: flex-start;
+  max-width: 100%;
+}
+.pestanas a {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--texto-medio);
+  font-size: 14px;
+}
+.pestanas a[aria-current="page"] {
+  background: var(--superficie);
+  color: var(--primario-oscuro);
+  font-weight: 500;
+}
+
+/* Filtros de los reportes */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 500;
+}
+.campo input {
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--borde-control);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 400;
+}
+.grupo-sensores {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.grupo-sensores legend {
+  font-weight: 500;
+  padding: 0 0 6px;
+}
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--borde-control);
+  border-radius: 8px;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+.opcion:has(input:checked) {
+  border-color: var(--primario);
+  background: var(--primario-claro);
+  color: var(--primario-oscuro);
+}
+.opcion input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+/* Gráficas */
+.encabezado-reporte {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.encabezado-reporte h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 600;
+}
+.rejilla-graficas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.grafica {
+  margin: 0;
+  border: 1px solid var(--borde-tenue);
+  border-radius: 10px;
+  padding: 14px 14px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.grafica figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.grafica-variable {
+  font-weight: 500;
+}
+.grafica-unidad {
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+.grafica-lienzo {
+  position: relative;
+  height: 190px;
+}
+
+/* Tablas */
+.tabla-desplazable {
+  overflow-x: auto;
+}
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.tabla caption {
+  text-align: left;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+.tabla th {
+  padding: 10px 12px;
+  font-weight: 500;
+  color: var(--texto-suave);
+  border-bottom: 1px solid var(--borde);
+  text-align: right;
+}
+.tabla td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--borde-tenue);
+  text-align: right;
+}
+.tabla th:first-child,
+.tabla td:first-child {
+  text-align: left;
+}
+.tabla td.sin-dato {
+  color: var(--texto-suave);
+}
+.marca-excedencia {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 6px;
+  background: var(--aviso-fondo);
+  color: var(--aviso-texto);
+  font-size: 12px;
+  font-weight: 500;
+}

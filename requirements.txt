@@ -1,0 +1,11 @@
+# Producción
+Django~=5.2.0
+psycopg[binary]~=3.2
+gunicorn~=23.0
+APScheduler~=3.11
+cryptography>=46,<47
+
+# Desarrollo y pruebas
+pytest~=9.0
+pytest-django~=4.11
+ruff~=0.15.0

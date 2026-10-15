@@ -1,0 +1,52 @@
+# SARRCA: base de datos, web y proceso de fondo.
+# Caddy (HTTPS) se agrega al desplegar en el servidor.
+
+x-app: &app
+  build: .
+  env_file: .env
+  environment:
+    TZ: America/Mexico_City
+    # Dentro de Docker la base se llama "db" y escucha en 5432, diga lo que diga el .env
+    SARRCA_DB_HOST: db
+    SARRCA_DB_PUERTO: "5432"
+  depends_on:
+    db:
+      condition: service_healthy
+  restart: unless-stopped
+  volumes:
+    - .:/app
+
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: ${SARRCA_DB_NOMBRE:-sarrca}
+      POSTGRES_USER: ${SARRCA_DB_USUARIO:-sarrca}
+      POSTGRES_PASSWORD: ${SARRCA_DB_CONTRASENA:?Falta SARRCA_DB_CONTRASENA en el .env}
+      TZ: America/Mexico_City
+      PGTZ: America/Mexico_City
+    command: ["postgres", "-c", "timezone=America/Mexico_City"]
+    ports:
+      # Solo en tu máquina (127.0.0.1), para correr pytest y manage.py fuera de Docker
+      - "127.0.0.1:${SARRCA_DB_PUERTO:-5432}:5432"
+    volumes:
+      - datos_db:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  web:
+    <<: *app
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    ports:
+      - "8000:8000"
+
+  worker:
+    <<: *app
+    command: ["python", "worker/main.py"]
+
+volumes:
+  datos_db:

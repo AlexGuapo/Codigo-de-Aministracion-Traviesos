@@ -1,0 +1,22 @@
+[project]
+name = "sarrca"
+version = "0.1.0"
+description = "Sistema de Automatización de Reportes de Registros de la Calidad del Aire"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+pythonpath = ["src", "."]
+testpaths = ["src", "tests"]
+addopts = "--import-mode=importlib"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["*/migrations/*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["config", "cuentas", "sensores", "recepcion", "lecturas", "calculo", "reportes", "worker"]

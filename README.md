@@ -142,7 +142,7 @@ Traviesos.py/
 
 Dentro de cada app, cuando se cree, va lo de la tabla de capas: `models.py`, `services.py`, `selectors.py`, `views.py`, `urls.py`, `forms.py`, `jobs.py`, `templates/<app>/`, `management/commands/` y `tests/`.
 
-> Las carpetas de `src/` ahorita solo tienen un `.gitkeep`, sin `__init__.py`, para que `startapp` no se queje: `python manage.py startapp cuentas src/cuentas` (y así con cada una). En el `apps.py` de cada app queda `name = "cuentas"`, sin el `src.`.
+> Cada app ya tiene su `__init__.py` y su `apps.py` con `name = "cuentas"` (sin el `src.`). Si algún archivo dice *Provisional* arriba, es un lugar apartado: lo reemplaza completo quien programa esa parte.
 
 ### ¿Dónde pongo lo que voy a programar?
 
@@ -171,12 +171,35 @@ Si no saben en qué módulo va algo, pregunten antes de crear el archivo.
 
 ## Instalación
 
-Todavía no está, falta el `docker-compose` y el esqueleto de Django. Cuando esté la idea es que sea algo así:
+Necesitas Docker Desktop (o Docker con Compose) y, para correr las pruebas desde tu máquina, Python 3.12 o más nuevo.
 
 ```bash
-cp .env.example .env          # y llenar los valores
-docker compose up --build
+cp .env.example .env      # y llena DJANGO_SECRET_KEY, SARRCA_DB_CONTRASENA y SARRCA_CLAVE_SECRETOS
+docker compose up -d --build
 docker compose exec web python manage.py migrate
 docker compose exec web python manage.py crear_admin
 docker compose exec web python manage.py precargar_cuentas
 ```
+
+La web queda en http://127.0.0.1:8000/. Con `docker compose logs -f worker` ves qué está haciendo el proceso de fondo.
+
+Para generar la clave de cifrado:
+
+```bash
+python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+```
+
+### Pruebas
+
+La base corre en Docker y las pruebas desde tu máquina (el `.env` ya apunta a `127.0.0.1`):
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate         # en Linux o Mac: source .venv/bin/activate
+pip install -r requirements.txt
+docker compose up -d db
+pytest
+ruff check .
+```
+
+Si el puerto 5432 de tu máquina ya está ocupado (por ejemplo, porque tienes otro PostgreSQL), pon otro en `SARRCA_DB_PUERTO` del `.env`, como `55432`, y vuelve a levantar la base.

@@ -1,0 +1,46 @@
+{% load static %}<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}SARRCA{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/sarrca.css' %}">
+  {% block cabeza %}{% endblock %}
+</head>
+<body>
+<div class="pagina">
+  <header class="encabezado">
+    <a class="marca" href="/">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#0E5F58" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 11h14a4 4 0 1 0-4-4"/><path d="M4 17h20a4 4 0 1 1-4 4"/><path d="M4 23h8"/></svg>
+      <span>
+        <span class="marca-nombre">SARRCA</span>
+        <span class="marca-lema">Calidad del aire · Zacatecas y Guadalupe</span>
+      </span>
+    </a>
+    {% block usuario %}{% endblock %}
+  </header>
+
+  <div class="cuerpo">
+    {% block menu %}
+    <nav class="menu" aria-label="Menú principal">
+      <a href="/" {% if seccion == "panel" %}aria-current="page"{% endif %}>Estado de la red</a>
+      <a href="/sensores/nuevo/" {% if seccion == "sensores" %}aria-current="page"{% endif %}>Sensores</a>
+      <a href="/reportes/diario/" {% if seccion == "reportes" %}aria-current="page"{% endif %}>Reportes</a>
+    </nav>
+    {% endblock %}
+
+    <main class="contenido">
+      {% block contenido %}{% endblock %}
+    </main>
+  </div>
+
+  <footer class="pie">
+    <span class="pie-leyenda">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#3F4A46" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4.5M8 4.6v.1" stroke-linecap="round"/></svg>
+      Datos de sensores de bajo costo de un proyecto de investigación. No son datos oficiales.
+    </span>
+  </footer>
+</div>
+{% block scripts %}{% endblock %}
+</body>
+</html>
