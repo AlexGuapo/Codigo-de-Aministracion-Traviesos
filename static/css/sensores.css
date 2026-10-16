@@ -1,0 +1,109 @@
+/* Pantallas del alta de sensores. Usa los colores de sarrca.css. */
+
+.encabezado-pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+.formulario-alta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.titulo-seccion {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.rejilla-campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px 20px;
+}
+.campo-ancho {
+  grid-column: 1 / -1;
+}
+.campo label {
+  font-weight: 500;
+}
+.campo input,
+.campo select {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--borde-control);
+  border-radius: 8px;
+  background: var(--superficie);
+  font: inherit;
+  font-weight: 400;
+}
+.campo-con-error input,
+.campo-con-error select {
+  border-color: #8c2a1c;
+}
+.campo-error {
+  color: #8c2a1c;
+  font-size: 13px;
+  font-weight: 400;
+}
+.campo-ayuda {
+  color: var(--texto-suave);
+  font-size: 13px;
+  font-weight: 400;
+}
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: 0;
+}
+.acciones .boton {
+  display: inline-flex;
+  align-items: center;
+}
+.resumen {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 20px;
+  margin: 0;
+}
+.resumen dt {
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+.resumen dd {
+  margin: 0;
+}
+.pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+.paso-actual {
+  font-weight: 600;
+  color: var(--primario);
+}
+.paso-pendiente {
+  color: var(--texto-suave);
+}
+
+@media (max-width: 600px) {
+  .resumen {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .resumen dd {
+    margin-bottom: 8px;
+  }
+  .acciones {
+    justify-content: stretch;
+  }
+  .acciones .boton {
+    flex: 1;
+    justify-content: center;
+  }
+}

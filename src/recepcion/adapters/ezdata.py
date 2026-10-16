@@ -129,7 +129,7 @@ class FuenteEzData:
         )
         filas = datos.get("rows") if isinstance(datos, dict) else None
         if not isinstance(filas, list):
-            self._fallar("respuesta inesperada", "historial", sensor.id)
+            self._fallar("respuesta inesperada", "historial", sensor.id, respondio=True)
         lecturas = []
         for fila in filas:
             lectura = self._fila_a_lectura(fila, Ruta.HISTORIAL, sensor.id)
@@ -156,7 +156,7 @@ class FuenteEzData:
         datos = self._consultar(f"{mac}/dataMacByKey/raw", None, "token", None)
         token = datos.get("dataToken") if isinstance(datos, dict) else None
         if not isinstance(token, str) or not token:
-            self._fallar("la nube no devolvió el token", "token", None)
+            self._fallar("la nube no devolvió el token", "token", None, respondio=True)
 
         apodo = None
         try:
@@ -206,19 +206,24 @@ class FuenteEzData:
             self._fallar("la respuesta no es JSON", nombre, sensor_id)
         if respuesta.get("code") != 200:
             self._fallar(
-                f"la nube respondió code={respuesta.get('code')}", nombre, sensor_id
+                f"la nube respondió code={respuesta.get('code')}",
+                nombre,
+                sensor_id,
+                respondio=True,
             )
         if respuesta.get("data") is None:
-            self._fallar(SIN_DATOS, nombre, sensor_id)
+            self._fallar(SIN_DATOS, nombre, sensor_id, respondio=True)
 
         logger.debug(
             "sensor %s: %s en %.1f s", sensor_id, nombre, time.monotonic() - inicio
         )
         return respuesta["data"]
 
-    def _fallar(self, motivo: str, nombre: str, sensor_id: int | None) -> NoReturn:
+    def _fallar(
+        self, motivo: str, nombre: str, sensor_id: int | None, *, respondio: bool = False
+    ) -> NoReturn:
         logger.warning("sensor %s: %s falló: %s", sensor_id, nombre, motivo)
-        raise FuenteNoDisponible(motivo, sensor_id)
+        raise FuenteNoDisponible(motivo, sensor_id, respondio=respondio)
 
     def _fila_a_lectura(
         self, fila: Any, ruta: Ruta, sensor_id: int | None

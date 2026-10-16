@@ -1,0 +1,160 @@
+{% load formato_reportes %}
+{% url 'reportes:panel_red' as url_panel %}
+<div hidden hx-get="{{ url_panel }}?filtro={{ filtro }}{% if elegido %}&amp;sensor={{ elegido.id }}{% endif %}"
+  hx-trigger="every 15m" hx-target="#contenido-panel" hx-headers='{"X-Consulta-Automatica": "1"}'></div>
+
+<div class="encabezado-panel">
+  <div>
+    <h1 class="titulo-pagina">Estado de la red</h1>
+    <p class="subtitulo">
+      Un sensor está «Fuera de operación» cuando le faltan dos lecturas seguidas{% if corte_min %}: con su ciclo actual, después de {{ corte_min }} minutos sin lectura{% endif %}.
+    </p>
+  </div>
+  <span class="sello-hora">Actualizado el {{ red.ahora|date:"d/m/Y, H:i" }}</span>
+</div>
+
+<section class="resumen-red" aria-label="Resumen de la red">
+  <div class="resumen-principal">
+    <span class="resumen-etiqueta">Sensores transmitiendo</span>
+    <p class="resumen-cifra"><strong>{{ red.transmitiendo|length }}</strong> de {{ red.sensores|length }} en la red</p>
+    <div class="mosaicos" role="list" aria-label="Elige un sensor">
+      {% for sensor in red.sensores %}
+      <a role="listitem" class="mosaico{% if elegido and sensor.id == elegido.id %} mosaico-elegido{% endif %}"
+         href="{{ url_panel }}?filtro={{ filtro }}&amp;sensor={{ sensor.id }}"
+         hx-get="{{ url_panel }}?filtro={{ filtro }}&amp;sensor={{ sensor.id }}" hx-target="#contenido-panel" hx-push-url="true"
+         title="{{ sensor.nombre }} · {{ sensor.etiqueta_estado }}"
+         {% if elegido and sensor.id == elegido.id %}aria-current="true"{% endif %}>
+        {% include "reportes/_dibujo_sensor.html" %}
+        <span class="mosaico-nombre">{{ sensor.nombre }}</span>
+      </a>
+      {% empty %}
+      <p class="nota">Todavía no hay sensores activos. Regístralos en <a href="{% url 'sensores:nuevo' %}">Sensores</a>.</p>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="resumen-dato">
+    <span class="resumen-etiqueta">Fuera de operación</span>
+    <strong class="resumen-numero">{{ red.fuera_de_operacion|length }}</strong>
+    <span class="resumen-nota">{% for sensor in red.fuera_de_operacion %}{{ sensor.nombre }}{% if not forloop.last %} · {% endif %}{% empty %}Ninguno{% endfor %}</span>
+  </div>
+  <div class="resumen-dato">
+    <span class="resumen-etiqueta">Días válidos, 30 días</span>
+    <strong class="resumen-numero">{% if red.porcentaje_validos is not None %}{{ red.porcentaje_validos }} %{% else %}—{% endif %}</strong>
+    <span class="barra-meta" aria-hidden="true"><span style="width: {{ red.porcentaje_validos|default:0 }}%"></span><i></i></span>
+    <span class="resumen-nota">Meta: 85 %. Un día vale con 18 horas válidas de PM2.5.</span>
+  </div>
+  <div class="resumen-dato">
+    <span class="resumen-etiqueta">Corte de la regla</span>
+    <strong class="resumen-numero">{% if corte_min %}{{ corte_min }} min{% else %}2 × ciclo + 5 min{% endif %}</strong>
+    <span class="resumen-nota">Sin lectura después de este tiempo.</span>
+  </div>
+</section>
+
+<div class="cuerpo-panel">
+  <section class="lista-sensores" aria-labelledby="titulo-sensores">
+    <div class="lista-encabezado">
+      <h2 id="titulo-sensores" class="titulo-seccion">Sensores</h2>
+      <nav class="filtros-panel" aria-label="Filtrar sensores">
+        <a href="{{ url_panel }}?filtro=todos{% if elegido %}&amp;sensor={{ elegido.id }}{% endif %}" hx-get="{{ url_panel }}?filtro=todos{% if elegido %}&amp;sensor={{ elegido.id }}{% endif %}" hx-target="#contenido-panel" hx-push-url="true" {% if filtro == "todos" %}aria-current="page"{% endif %}>Todos <span>{{ conteos.todos }}</span></a>
+        <a href="{{ url_panel }}?filtro=transmitiendo{% if elegido %}&amp;sensor={{ elegido.id }}{% endif %}" hx-get="{{ url_panel }}?filtro=transmitiendo{% if elegido %}&amp;sensor={{ elegido.id }}{% endif %}" hx-target="#contenido-panel" hx-push-url="true" {% if filtro == "transmitiendo" %}aria-current="page"{% endif %}>Transmitiendo <span>{{ conteos.transmitiendo }}</span></a>
+        <a href="{{ url_panel }}?filtro=fuera{% if elegido %}&amp;sensor={{ elegido.id }}{% endif %}" hx-get="{{ url_panel }}?filtro=fuera{% if elegido %}&amp;sensor={{ elegido.id }}{% endif %}" hx-target="#contenido-panel" hx-push-url="true" {% if filtro == "fuera" %}aria-current="page"{% endif %}>Fuera de operación <span>{{ conteos.fuera }}</span></a>
+      </nav>
+    </div>
+
+    {% for sensor in visibles %}
+    <a class="tarjeta-sensor tarjeta-{{ sensor.estado }}{% if elegido and sensor.id == elegido.id %} tarjeta-elegida{% endif %}"
+       href="{{ url_panel }}?filtro={{ filtro }}&amp;sensor={{ sensor.id }}"
+       hx-get="{{ url_panel }}?filtro={{ filtro }}&amp;sensor={{ sensor.id }}" hx-target="#contenido-panel" hx-push-url="true">
+      <div class="tarjeta-fila">
+        {% include "reportes/_estado_sensor.html" %}
+        <div class="tarjeta-nombre">
+          <strong>{{ sensor.nombre }}</strong>
+          <span>{% if sensor.colonia %}{{ sensor.municipio }} · {{ sensor.colonia }}{% else %}Sin colonia{% endif %}</span>
+        </div>
+        <div class="tarjeta-ultima">
+          {% if sensor.ultima_lectura %}
+          <span class="resumen-etiqueta">Última lectura</span>
+          <strong>{{ sensor.ultima_lectura|momento:hoy }}</strong>
+          <span class="hace hace-{{ sensor.estado }}">hace {{ sensor.sin_lectura_desde|duracion }}</span>
+          {% else %}
+          <strong>Sin lecturas todavía</strong>
+          {% endif %}
+        </div>
+      </div>
+      {% if sensor.ultima_lectura %}
+      <p class="tarjeta-particulas">
+        Hora de las {{ sensor.hora_cerrada|date:"H:i" }}:
+        PM2.5 {% if sensor.pm25 is not None %}<strong>{{ sensor.pm25|entero }}</strong> µg/m³{% else %}<em>datos insuficientes</em>{% endif %}
+        · PM10 {% if sensor.pm10 is not None %}<strong>{{ sensor.pm10|entero }}</strong> µg/m³{% else %}<em>datos insuficientes</em>{% endif %}
+      </p>
+      {% endif %}
+      {% include "reportes/_continuidad.html" with dias=sensor.continuidad %}
+      <div class="tarjeta-pie">
+        <span>Últimos {{ sensor.continuidad|length }} días</span>
+        <span>{% if sensor.porcentaje_validos is not None %}{{ sensor.porcentaje_validos }} % de días válidos{% endif %}</span>
+      </div>
+    </a>
+    {% empty %}
+    {% if red.sensores %}<p class="nota">Ningún sensor en este filtro.</p>{% endif %}
+    {% endfor %}
+  </section>
+
+  {% if elegido %}
+  <aside class="sensor-elegido tarjeta" aria-labelledby="titulo-elegido">
+    <div class="tarjeta-fila">
+      <div>
+        <span class="resumen-etiqueta">Sensor elegido</span>
+        <h2 id="titulo-elegido" class="elegido-nombre">{{ elegido.nombre }}</h2>
+        <span class="nota">{% if elegido.colonia %}{{ elegido.municipio }} · {{ elegido.colonia }}{% endif %}</span>
+      </div>
+      {% include "reportes/_estado_sensor.html" with sensor=elegido %}
+    </div>
+
+    <div class="caja-ultima">
+      <span class="resumen-etiqueta">Última lectura</span>
+      {% if elegido.ultima_lectura %}
+      <strong>{{ elegido.ultima_lectura|momento:hoy }}</strong>
+      <span class="hace hace-{{ elegido.estado }}">hace {{ elegido.sin_lectura_desde|duracion }}</span>
+      {% else %}
+      <strong>Sin lecturas todavía</strong>
+      {% endif %}
+    </div>
+
+    {% if elegido.ultima_lectura %}
+    <div>
+      <p class="elegido-subtitulo">Tiempo sin lectura frente al corte de {{ elegido.umbral|minutos }}</p>
+      <div class="barra-corte barra-{{ elegido.estado }}" role="img" aria-label="{{ elegido.sin_lectura_desde|duracion }} sin lectura; el corte es de {{ elegido.umbral|minutos }}">
+        <span style="width: {{ barra_sin_lectura }}%"></span><i></i>
+      </div>
+      <div class="barra-escala"><span>0</span><span>{{ elegido.umbral|minutos }}</span><span>más</span></div>
+    </div>
+
+    <dl class="elegido-particulas">
+      <div><dt>PM2.5 · {{ elegido.hora_cerrada|date:"H:i" }}</dt><dd>{% if elegido.pm25 is not None %}{{ elegido.pm25|entero }} <small>µg/m³</small>{% else %}<em>datos insuficientes</em>{% endif %}</dd></div>
+      <div><dt>PM10 · {{ elegido.hora_cerrada|date:"H:i" }}</dt><dd>{% if elegido.pm10 is not None %}{{ elegido.pm10|entero }} <small>µg/m³</small>{% else %}<em>datos insuficientes</em>{% endif %}</dd></div>
+    </dl>
+    {% endif %}
+
+    <div>
+      <p class="elegido-subtitulo">Continuidad de los últimos {{ elegido.continuidad|length }} días</p>
+      {% include "reportes/_continuidad.html" with dias=elegido.continuidad grande=True %}
+      {% if elegido.continuidad %}
+      <div class="barra-escala"><span>{{ elegido.continuidad.0.fecha|dia_corto }}</span><span>{{ hoy|dia_corto }}</span></div>
+      {% endif %}
+      <ul class="leyenda-continuidad">
+        <li><i class="dia dia-valido"></i>Día válido</li>
+        <li><i class="dia dia-incompleto"></i>Incompleto</li>
+        <li><i class="dia dia-sin_lecturas"></i>Sin lecturas</li>
+        <li><i class="dia dia-en_curso"></i>Hoy, en curso</li>
+      </ul>
+    </div>
+
+    <div class="elegido-cifras">
+      <div><span class="resumen-etiqueta">Días válidos</span><strong>{% if elegido.porcentaje_validos is not None %}{{ elegido.porcentaje_validos }} %{% else %}—{% endif %}</strong></div>
+      <div><span class="resumen-etiqueta">Hueco más largo</span><strong>{% if hueco %}{{ hueco|duracion_larga }}{% elif hueco is None %}—{% else %}Ninguno{% endif %}</strong></div>
+    </div>
+
+    <p class="nota">La plataforma no sabe si fue la batería o el wifi: la nube del fabricante solo deja de recibir lecturas.</p>
+  </aside>
+  {% endif %}
+</div>

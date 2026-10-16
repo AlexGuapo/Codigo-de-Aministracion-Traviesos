@@ -153,4 +153,6 @@ LOGGING = {
         "consola": {"class": "logging.StreamHandler", "formatter": "estandar"},
     },
     "root": {"handlers": ["consola"], "level": os.environ.get("SARRCA_NIVEL_LOG", "INFO")},
+    # Sin esto, el programador del worker escribe dos líneas por cada tarea que corre.
+    "loggers": {"apscheduler": {"level": "WARNING"}},
 }

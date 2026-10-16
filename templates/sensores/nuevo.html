@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Registrar sensor · SARRCA{% endblock %}
+
+{% block cabeza %}<link rel="stylesheet" href="{% static 'css/sensores.css' %}">{% endblock %}
+
+{% block contenido %}
+<div class="encabezado-pagina">
+  <h1 class="titulo-pagina">Registrar sensor</h1>
+  <p class="subtitulo">El sistema comprueba la MAC con la nube de M5Stack antes de guardar.</p>
+</div>
+
+<form method="post" action="{% url 'sensores:nuevo' %}" class="formulario-alta" novalidate>
+  {% csrf_token %}
+  {% for error in formulario.non_field_errors %}<div class="error-formulario" role="alert">{{ error }}</div>{% endfor %}
+
+  <section class="tarjeta" aria-labelledby="titulo-aparato">
+    <h2 id="titulo-aparato" class="titulo-seccion">Aparato</h2>
+    <div class="rejilla-campos">
+      {% include "sensores/_campo.html" with campo=formulario.nombre_corto %}
+      {% include "sensores/_campo.html" with campo=formulario.mac %}
+      {% include "sensores/_campo.html" with campo=formulario.lecturas_desde %}
+    </div>
+  </section>
+
+  <section class="tarjeta" aria-labelledby="titulo-ubicacion">
+    <h2 id="titulo-ubicacion" class="titulo-seccion">Responsable y ubicación</h2>
+    <div class="rejilla-campos">
+      {% include "sensores/_campo.html" with campo=formulario.responsable %}
+      {% include "sensores/_campo.html" with campo=formulario.colonia %}
+      <div class="campo-ancho">{% include "sensores/_campo.html" with campo=formulario.direccion %}</div>
+      {% include "sensores/_campo.html" with campo=formulario.latitud %}
+      {% include "sensores/_campo.html" with campo=formulario.longitud %}
+    </div>
+    <p class="nota">La ubicación exacta y la MAC solo las ves tú. El público y los vecinos solo ven el nombre corto y la colonia.</p>
+  </section>
+
+  <div class="acciones">
+    <button type="submit" class="boton boton-primario">Registrar sensor</button>
+  </div>
+</form>
+{% endblock %}

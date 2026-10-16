@@ -1,0 +1,79 @@
+<section id="estado-verificacion" class="tarjeta" aria-live="polite"
+  {% if en_espera %}hx-get="{% url 'sensores:estado_verificacion' verificacion.pk %}" hx-trigger="every 2s" hx-swap="outerHTML" hx-headers='{"X-Consulta-Automatica": "1"}'{% endif %}>
+
+{% if en_espera %}
+  <h2 class="titulo-seccion">Comprobando la MAC con la nube de M5Stack</h2>
+  <p class="subtitulo">Puede tardar hasta un minuto. Esta pantalla se actualiza sola; no hace falta recargarla.</p>
+  <ol class="pasos">
+    <li class="{% if verificacion.estado == 'en_curso' %}paso-actual{% else %}paso-pendiente{% endif %}">Buscar la MAC en la nube y obtener su token</li>
+    <li class="paso-pendiente">Revisar el resumen y confirmar</li>
+  </ol>
+
+{% elif sin_atender %}
+  <h2 class="titulo-seccion">El proceso de fondo no responde</h2>
+  <p>Nadie ha tomado la verificación en un minuto. Avisa al equipo técnico; cuando el proceso de fondo vuelva, la verificación seguirá en pie.</p>
+  <div class="acciones">
+    <a class="boton" href="{% url 'sensores:estado_verificacion' verificacion.pk %}">Volver a revisar</a>
+  </div>
+
+{% elif verificacion.estado == 'confirmada' %}
+  <h2 class="titulo-seccion">Sensor registrado</h2>
+  <p>La nube reconoció la MAC. El sistema ya está trayendo sus lecturas desde el {{ lecturas_desde|date:"d/m/Y" }}.</p>
+  <dl class="resumen">
+    <dt>Sensor</dt><dd>{{ verificacion.sensor.nombre_corto }}</dd>
+    <dt>Colonia</dt><dd>{{ colonia.nombre }} ({{ colonia.municipio }})</dd>
+    <dt>Responsable</dt><dd>{{ responsable.nombre }}</dd>
+    <dt>Última lectura en la nube</dt><dd>{{ verificacion.ultima_lectura_en|date:"d/m/Y H:i"|default:"Sin lecturas" }}</dd>
+  </dl>
+  <div class="acciones">
+    <a class="boton" href="{% url 'sensores:nuevo' %}">Registrar otro sensor</a>
+    <a class="boton boton-primario" href="{% url 'reportes:panel_red' %}">Ir al estado de la red</a>
+  </div>
+
+{% elif vencida %}
+  <h2 class="titulo-seccion">La verificación venció</h2>
+  <p>Pasaron más de 15 minutos sin confirmar. Vuelve a registrar el sensor.</p>
+  <div class="acciones"><a class="boton boton-primario" href="{% url 'sensores:nuevo' %}">Registrar sensor</a></div>
+
+{% elif verificacion.estado == 'sin_datos' %}
+  <h2 class="titulo-seccion">No se registró el sensor</h2>
+  <p>La nube no tiene datos de esa MAC: revisa que el sensor esté encendido y configurado.</p>
+  <div class="acciones"><a class="boton boton-primario" href="{% url 'sensores:nuevo' %}">Volver a intentar</a></div>
+
+{% elif verificacion.estado == 'nube_no_responde' %}
+  <h2 class="titulo-seccion">No se registró el sensor</h2>
+  <p>La nube de M5Stack no respondió. Intenta más tarde.</p>
+  <div class="acciones"><a class="boton boton-primario" href="{% url 'sensores:nuevo' %}">Volver a intentar</a></div>
+
+{% else %}
+  <h2 class="titulo-seccion">Revisa y confirma</h2>
+  {% if verificacion.sensor_existente %}
+  <div class="aviso" role="status">Esa MAC es del sensor {{ verificacion.sensor_existente.nombre_corto }}, dado de baja. Al confirmar se reactiva y conserva sus lecturas anteriores.</div>
+  {% endif %}
+  <dl class="resumen">
+    <dt>Nombre corto</dt><dd>{{ datos.nombre_corto }}</dd>
+    <dt>Responsable</dt><dd>{{ responsable.nombre }}{% if responsable.estado == 'por_validar' %} · su cuenta quedará validada{% endif %}</dd>
+    <dt>Colonia</dt><dd>{{ colonia.nombre }} ({{ colonia.municipio }})</dd>
+    <dt>Dirección</dt><dd>{{ datos.direccion }}</dd>
+    <dt>Coordenadas</dt><dd>{{ datos.latitud }}, {{ datos.longitud }}</dd>
+    <dt>Traer lecturas desde</dt><dd>{{ lecturas_desde|date:"d/m/Y" }}</dd>
+    <dt>Última lectura en la nube</dt>
+    <dd>
+      {% if verificacion.ultima_lectura_en %}
+      {{ verificacion.ultima_lectura_en|date:"d/m/Y H:i" }} · PM2.5 {{ ultima.pm2_5|default_if_none:"sin dato" }} µg/m³ · PM10 {{ ultima.pm10_0|default_if_none:"sin dato" }} µg/m³
+      {% else %}La nube no devolvió una lectura{% endif %}
+    </dd>
+  </dl>
+  {% if fuera_de_zona %}
+  <div class="aviso" role="status">Las coordenadas quedan fuera de Zacatecas y Guadalupe. Revísalas; puedes guardar de todos modos.</div>
+  {% endif %}
+  {% if nube_empieza_despues %}
+  <div class="aviso" role="status">La nube conserva lecturas desde el {{ verificacion.nube_conserva_desde|date:"d/m/Y H:i" }}; elegiste el {{ lecturas_desde|date:"d/m/Y" }}. Se traerá lo que haya.</div>
+  {% endif %}
+  <form method="post" action="{% url 'sensores:confirmar' verificacion.pk %}" class="acciones">
+    {% csrf_token %}
+    <a class="boton" href="{% url 'sensores:nuevo' %}">Corregir datos</a>
+    <button type="submit" class="boton boton-primario">Confirmar y guardar</button>
+  </form>
+{% endif %}
+</section>

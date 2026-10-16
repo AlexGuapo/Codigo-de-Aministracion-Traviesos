@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Estado de la red · SARRCA{% endblock %}
+
+{% block cabeza %}<link rel="stylesheet" href="{% static 'css/panel.css' %}">{% endblock %}
+
+{% block contenido %}
+<div id="contenido-panel">
+  {% include "reportes/_panel_contenido.html" %}
+</div>
+{% endblock %}

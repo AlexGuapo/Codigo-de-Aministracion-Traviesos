@@ -1,0 +1,34 @@
+/* Reporte diario y láminas del mensual. Usa los colores de sarrca.css. */
+
+.navegacion-dias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.navegacion-dias .boton {
+  display: inline-flex;
+  align-items: center;
+}
+.tabla .unidad {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--texto-suave);
+}
+.tabla tbody th {
+  padding: 10px 12px;
+  text-align: left;
+  color: var(--texto);
+  border-bottom: 1px solid var(--borde-tenue);
+}
+.periodos ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.titulo-periodos {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}

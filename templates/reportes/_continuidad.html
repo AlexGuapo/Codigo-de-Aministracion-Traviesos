@@ -1,0 +1,3 @@
+<ol class="continuidad{% if grande %} continuidad-grande{% endif %}" aria-label="Continuidad de los últimos días">
+  {% for dia in dias %}<li class="dia dia-{{ dia.estado }}" title="{{ dia.fecha|date:'d/m/Y' }} · {{ dia.etiqueta }}"></li>{% endfor %}
+</ol>

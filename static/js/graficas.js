@@ -1,6 +1,7 @@
-// Dibuja las gráficas del reporte diario a partir de las series que deja la página en
-// <script id="series" type="application/json">. El eje horizontal va en minutos desde las
-// 00:00 del día, para no depender de la zona horaria del navegador.
+// Dibuja las gráficas de cada lámina del reporte diario (y de las láminas del mensual, que llegan
+// después con HTMX). Cada lámina dice en `data-lamina` el id del <script type="application/json">
+// con sus series. El eje horizontal va en minutos desde las 00:00 del día, para no depender de
+// la zona horaria del navegador.
 (function () {
   "use strict";
 
@@ -19,8 +20,8 @@
     return String(h).padStart(2, "0") + ":" + String(m).padStart(2, "0");
   }
 
-  function dibujar(grafica) {
-    const lienzo = document.getElementById("grafica-" + grafica.variable);
+  function dibujar(lamina, grafica) {
+    const lienzo = lamina.querySelector('canvas[data-variable="' + grafica.variable + '"]');
     if (!lienzo) {
       return;
     }
@@ -81,11 +82,27 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const fuente = document.getElementById("series");
-    if (!fuente || typeof Chart === "undefined") {
+  function dibujarLaminas(raiz) {
+    if (typeof Chart === "undefined") {
       return;
     }
-    JSON.parse(fuente.textContent).forEach(dibujar);
+    raiz.querySelectorAll("[data-lamina]:not([data-dibujada])").forEach(function (lamina) {
+      const fuente = document.getElementById(lamina.dataset.lamina);
+      if (!fuente) {
+        return;
+      }
+      lamina.dataset.dibujada = "1";
+      JSON.parse(fuente.textContent).forEach(function (grafica) {
+        dibujar(lamina, grafica);
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    dibujarLaminas(document);
+  });
+  // Una lámina que llega con HTMX reemplaza a su marcador, así que se busca en todo el documento.
+  document.addEventListener("htmx:afterSettle", function () {
+    dibujarLaminas(document);
   });
 })();

@@ -1,0 +1,508 @@
+/* Panel del estado de la red. Usa los colores de sarrca.css. */
+
+#contenido-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  --verde: #1f8f6f;
+  --verde-claro: #dff1ea;
+  --ambar: #d9a23a;
+  --rojizo: #b4461f;
+  --apagado: #c7cfcb;
+  --resumen-fondo: #10302d;
+}
+
+.encabezado-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px 24px;
+}
+.encabezado-panel .subtitulo {
+  max-width: 560px;
+}
+.sello-hora {
+  padding: 6px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--superficie);
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--texto-medio);
+}
+.titulo-seccion {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.resumen-etiqueta {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+/* Resumen de la red */
+.resumen-red {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 24px 28px;
+  border-radius: 14px;
+  background: var(--resumen-fondo);
+  color: #ffffff;
+}
+.resumen-red .resumen-etiqueta {
+  color: #a9c3bd;
+}
+.resumen-cifra {
+  margin: 4px 0 14px;
+  font-size: 22px;
+  color: #d6e4e0;
+}
+.resumen-cifra strong {
+  font-size: 56px;
+  line-height: 1;
+  margin-right: 6px;
+  color: #ffffff;
+}
+.resumen-dato {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+.resumen-numero {
+  font-size: 30px;
+  line-height: 1.1;
+}
+.resumen-nota {
+  font-size: 12px;
+  color: #c3d6d1;
+}
+.barra-meta {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.barra-meta span {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: #4fd1a5;
+}
+.barra-meta i {
+  position: absolute;
+  top: -3px;
+  left: 85%;
+  width: 2px;
+  height: 12px;
+  background: #ffffff;
+}
+
+/* Mosaicos con el dibujo de cada sensor */
+.mosaicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.mosaico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 72px;
+  padding: 8px 4px 6px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: #d6e4e0;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+.mosaico:hover,
+.mosaico:focus-visible {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+.mosaico-elegido {
+  border-color: #4fd1a5;
+  background: rgba(79, 209, 165, 0.12);
+  color: #ffffff;
+}
+.mosaico-nombre {
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+}
+.dibujo-sensor {
+  width: 40px;
+  height: 50px;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.dibujo-transmitiendo .dibujo-cuerpo {
+  fill: #2a7d6b;
+  stroke: #4fd1a5;
+}
+.dibujo-transmitiendo .dibujo-pantalla {
+  fill: #c9f3e4;
+  stroke: none;
+}
+.dibujo-transmitiendo .dibujo-onda {
+  stroke: #1f6f5c;
+}
+.dibujo-transmitiendo .dibujo-rejilla,
+.dibujo-transmitiendo .dibujo-senal {
+  stroke: #4fd1a5;
+}
+.dibujo-fuera_de_operacion .dibujo-cuerpo {
+  stroke: #e7a58c;
+  stroke-dasharray: 4 3;
+}
+.dibujo-fuera_de_operacion .dibujo-pantalla {
+  fill: rgba(255, 255, 255, 0.08);
+  stroke: #e7a58c;
+}
+.dibujo-fuera_de_operacion .dibujo-onda,
+.dibujo-fuera_de_operacion .dibujo-rejilla {
+  stroke: #e7a58c;
+}
+.dibujo-sin_lecturas .dibujo-cuerpo,
+.dibujo-sin_lecturas .dibujo-pantalla,
+.dibujo-sin_lecturas .dibujo-rejilla {
+  stroke: #7d938e;
+}
+
+/* Lista de sensores y ficha del elegido */
+.cuerpo-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.lista-sensores {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.lista-encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.filtros-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.filtros-panel a {
+  padding: 6px 12px;
+  border: 1px solid var(--borde-control);
+  border-radius: 999px;
+  background: var(--superficie);
+  color: var(--texto);
+  font-size: 13px;
+  text-decoration: none;
+}
+.filtros-panel a[aria-current="page"] {
+  background: var(--resumen-fondo);
+  border-color: var(--resumen-fondo);
+  color: #ffffff;
+}
+.tarjeta-sensor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  background: var(--superficie);
+  color: var(--texto);
+  text-decoration: none;
+}
+.tarjeta-sensor:hover {
+  border-color: var(--borde-control);
+}
+.tarjeta-fuera_de_operacion {
+  border: 1.5px dashed #b9a9a2;
+}
+.tarjeta-elegida {
+  border: 2px solid var(--resumen-fondo);
+  box-shadow: 0 4px 14px rgba(16, 48, 45, 0.12);
+}
+.tarjeta-fila {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+.tarjeta-nombre {
+  flex: 1 1 140px;
+  display: flex;
+  flex-direction: column;
+}
+.tarjeta-nombre strong {
+  font-family: ui-monospace, monospace;
+  font-size: 16px;
+}
+.tarjeta-nombre span {
+  font-size: 13px;
+  color: var(--texto-suave);
+}
+.tarjeta-ultima {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+.tarjeta-ultima strong {
+  font-family: ui-monospace, monospace;
+}
+.hace {
+  font-size: 12px;
+  font-weight: 600;
+}
+.hace-transmitiendo {
+  color: var(--verde);
+}
+.hace-fuera_de_operacion {
+  color: var(--rojizo);
+}
+.tarjeta-particulas {
+  margin: 0;
+  font-size: 13px;
+  color: var(--texto-medio);
+}
+.tarjeta-pie {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+
+/* Insignia del estado */
+.insignia {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.insignia i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.insignia-transmitiendo {
+  background: var(--verde-claro);
+  color: #12644d;
+}
+.insignia-transmitiendo i {
+  background: var(--verde);
+}
+.insignia-fuera_de_operacion {
+  border: 1.5px dashed #6f625c;
+  color: var(--texto);
+}
+.insignia-fuera_de_operacion i {
+  border: 1.5px solid #6f625c;
+}
+.insignia-sin_lecturas {
+  background: var(--fondo);
+  color: var(--texto-suave);
+}
+.insignia-sin_lecturas i {
+  background: var(--apagado);
+}
+
+/* Continuidad: un cuadro por día */
+.continuidad {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dia {
+  display: block;
+  height: 16px;
+  border-radius: 3px;
+}
+.continuidad-grande .dia {
+  height: 24px;
+}
+.dia-valido {
+  background: var(--verde);
+}
+.dia-incompleto {
+  background: var(--ambar);
+}
+.dia-sin_lecturas {
+  border: 1.5px solid var(--apagado);
+  background: var(--superficie);
+}
+.dia-en_curso {
+  background: #a8dcc9;
+  outline: 1.5px solid var(--resumen-fondo);
+}
+.leyenda-continuidad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  color: var(--texto-medio);
+}
+.leyenda-continuidad li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.leyenda-continuidad .dia {
+  width: 12px;
+  height: 12px;
+}
+
+/* Ficha del sensor elegido */
+.sensor-elegido {
+  position: sticky;
+  top: 16px;
+  gap: 18px;
+}
+.elegido-nombre {
+  margin: 2px 0;
+  font-family: ui-monospace, monospace;
+  font-size: 30px;
+}
+.caja-ultima {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--fondo);
+}
+.caja-ultima strong {
+  font-family: ui-monospace, monospace;
+  font-size: 22px;
+}
+.elegido-subtitulo {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.barra-corte {
+  position: relative;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--borde-tenue);
+}
+.barra-corte span {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background: var(--verde);
+}
+.barra-fuera_de_operacion span {
+  background: var(--rojizo);
+}
+.barra-corte i {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 2px;
+  height: 18px;
+  background: var(--texto);
+}
+.barra-escala {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--texto-suave);
+}
+.elegido-particulas,
+.elegido-cifras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0;
+}
+.elegido-particulas div,
+.elegido-cifras div {
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+}
+.elegido-particulas dt {
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+.elegido-particulas dd {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.elegido-particulas em {
+  font-size: 13px;
+  font-weight: 400;
+}
+.elegido-cifras strong {
+  display: block;
+  font-size: 22px;
+}
+
+@media (max-width: 1000px) {
+  .resumen-red {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .resumen-principal {
+    grid-column: 1 / -1;
+  }
+  .resumen-dato:nth-child(2) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .cuerpo-panel {
+    grid-template-columns: 1fr;
+  }
+  .sensor-elegido {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .resumen-red {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .resumen-dato {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .resumen-cifra strong {
+    font-size: 44px;
+  }
+  .tarjeta-ultima {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

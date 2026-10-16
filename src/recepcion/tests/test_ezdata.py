@@ -196,6 +196,19 @@ def test_fallas_se_vuelven_fuente_no_disponible(respuesta, motivo):
     assert error.value.sensor_id == 1
 
 
+LA_NUBE_RESPONDIO = ["code=500", SIN_DATOS, "inesperada"]
+
+
+@pytest.mark.parametrize(
+    ("respuesta", "respondio"), [(r, motivo in LA_NUBE_RESPONDIO) for r, motivo in FALLAS]
+)
+def test_distingue_si_la_nube_respondio(respuesta, respondio):
+    f, _ = fuente(respuesta)
+    with pytest.raises(FuenteNoDisponible) as error:
+        f.historial(SENSOR, 1, 5)
+    assert error.value.respondio is respondio
+
+
 def test_error_http():
     url = f"https://ezdata2.m5stack.com/api/v2/{TOKEN}/history"
     f, _ = fuente(urllib.error.HTTPError(url, 503, "Service Unavailable", {}, None))

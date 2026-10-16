@@ -1,6 +1,10 @@
 import pytest
 
-from sensores.validaciones import NombreCortoInvalido, validar_nombre_corto
+from sensores.validaciones import (
+    NombreCortoInvalido,
+    fuera_de_la_zona,
+    validar_nombre_corto,
+)
 
 # Datos inventados para las pruebas
 RESPONSABLE = "María Pérez Solís"
@@ -52,3 +56,22 @@ def test_el_error_no_repite_el_dato_personal():
     with pytest.raises(NombreCortoInvalido) as error:
         validar("S-Perez")
     assert "erez" not in str(error.value).lower()
+
+
+@pytest.mark.parametrize("nombre", ["S", "Sensor-1234"])
+def test_fuera_de_2_a_10_caracteres_se_rechaza(nombre):
+    with pytest.raises(NombreCortoInvalido, match="de 2 a 10"):
+        validar(nombre)
+
+
+@pytest.mark.parametrize("nombre", ["G3", "Escuela-10"])
+def test_2_y_10_caracteres_se_aceptan(nombre):
+    assert validar(nombre) == nombre
+
+
+def test_coordenadas_de_la_zona():
+    assert not fuera_de_la_zona(22.7709, -102.5832)  # centro de Zacatecas
+    assert not fuera_de_la_zona(22.7471, -102.5185)  # centro de Guadalupe
+    assert fuera_de_la_zona(21.8818, -102.2916)  # Aguascalientes
+    assert fuera_de_la_zona(-22.77, 102.58)
+

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Registrar sensor · SARRCA{% endblock %}
+
+{% block cabeza %}<link rel="stylesheet" href="{% static 'css/sensores.css' %}">{% endblock %}
+
+{% block contenido %}
+<div class="encabezado-pagina">
+  <h1 class="titulo-pagina">Registrar sensor</h1>
+</div>
+{% if error %}<div class="error-formulario" role="alert">{{ error }}</div>{% endif %}
+{% include "sensores/_estado_verificacion.html" %}
+{% endblock %}

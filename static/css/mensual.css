@@ -1,0 +1,21 @@
+/* Reporte mensual. Usa los colores de sarrca.css. */
+
+.nota-celda {
+  display: block;
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+.tabla-limites {
+  max-width: 480px;
+}
+.titulo-laminas {
+  margin: 8px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.lamina-pendiente {
+  min-height: 160px;
+  align-items: center;
+  justify-content: center;
+  color: var(--texto-suave);
+}

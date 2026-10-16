@@ -1,0 +1,69 @@
+{% with id_lamina=reporte.dia|date:"Ymd" %}{% with id_series="series-"|add:id_lamina %}
+<section class="tarjeta lamina" data-lamina="{{ id_series }}" aria-labelledby="titulo-{{ id_lamina }}">
+  <div class="encabezado-reporte">
+    <h2 id="titulo-{{ id_lamina }}">{{ reporte.titulo }}</h2>
+    <span class="nota">Hora local</span>
+  </div>
+
+  {% if not reporte.hay_lecturas %}
+  <p class="aviso">Ningún sensor elegido tiene lecturas este día.</p>
+  {% else %}
+
+  <div class="rejilla-graficas">
+    {% for grafica in reporte.graficas %}
+    <figure class="grafica">
+      <figcaption>
+        <span class="grafica-variable">{{ grafica.etiqueta }}</span>
+        <span class="grafica-unidad">{{ grafica.unidad }} · cada lectura del día</span>
+      </figcaption>
+      <div class="grafica-lienzo">
+        <canvas data-variable="{{ grafica.variable }}" role="img" aria-label="{{ grafica.etiqueta }} de cada sensor, de 00:00 a 23:59"></canvas>
+      </div>
+    </figure>
+    {% endfor %}
+  </div>
+
+  <div class="tabla-desplazable">
+    <table class="tabla">
+      <caption>Promedios de 24 horas (horas válidas)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Variable</th>
+          {% for sensor in reporte.sensores %}<th scope="col">{{ sensor.nombre_corto }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for fila in reporte.tabla %}
+        <tr>
+          <th scope="row">{{ fila.etiqueta }} <span class="unidad">{{ fila.unidad }}</span></th>
+          {% for celda in fila.celdas %}
+          <td{% if not celda.resultado.valido %} class="sin-dato"{% endif %}>{{ celda.texto }}{% if celda.excedencia %}<span class="marca-excedencia">excedencia</span>{% endif %}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <p class="nota">
+    {% if reporte.limites %}
+    Límite de 24 h de la NOM-025 vigente ese día:{% for variable, limite in reporte.limites.items %} {% if variable == "pm2_5" %}PM2.5{% else %}PM10{% endif %} {{ limite.valor|floatformat:0 }} {{ limite.unidad }}{% if not forloop.last %},{% endif %}{% endfor %}.
+    Una excedencia no significa incumplir la norma: eso solo lo decide la evaluación anual. Un día con menos de 18 horas válidas dice «datos insuficientes» y no se compara.
+    {% else %}
+    La NOM-025 todavía no regía ese día: los promedios no se comparan con un límite.
+    {% endif %}
+  </p>
+
+  <div class="periodos">
+    <h3 class="titulo-periodos">Periodos sin transmitir</h3>
+    {% if reporte.periodos %}
+    <ul>{% for periodo in reporte.periodos %}<li>{{ periodo }}</li>{% endfor %}</ul>
+    {% else %}
+    <p class="nota">Ninguno en este día.</p>
+    {% endif %}
+  </div>
+
+  {{ reporte.graficas|json_script:id_series }}
+  {% endif %}
+</section>
+{% endwith %}{% endwith %}

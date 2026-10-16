@@ -79,11 +79,16 @@ class FuenteNoDisponible(Exception):
     """La fuente no respondió o respondió con error.
 
     Solo lleva el motivo y el id del sensor: nunca la URL, la MAC ni el token.
+    `respondio` distingue una nube que contestó con error o sin datos (un token
+    que cambió, una MAC que no existe) de una que no contestó.
     """
 
-    def __init__(self, motivo: str, sensor_id: int | None = None) -> None:
+    def __init__(
+        self, motivo: str, sensor_id: int | None = None, *, respondio: bool = False
+    ) -> None:
         self.motivo = motivo
         self.sensor_id = sensor_id
+        self.respondio = respondio
         if sensor_id is None:
             super().__init__(motivo)
         else:

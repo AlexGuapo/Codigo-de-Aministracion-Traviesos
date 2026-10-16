@@ -31,6 +31,11 @@ _PALABRAS_COMUNES = frozenset(
 )  # fmt: skip
 
 LARGO_MINIMO_PALABRA = 3
+LARGO_NOMBRE_CORTO = (2, 10)
+
+# Rectángulo que cubre los municipios de Zacatecas y Guadalupe: (latitud mín., latitud máx.,
+# longitud mín., longitud máx.). Fuera de él solo se avisa; no se rechaza.
+ZONA_ZACATECAS_GUADALUPE = (22.45, 23.05, -102.80, -102.15)
 
 
 class MacInvalida(ValueError):
@@ -87,6 +92,11 @@ def validar_nombre_corto(
     limpio = (nombre or "").strip()
     if not limpio:
         raise NombreCortoInvalido("Falta el nombre corto del sensor.")
+    minimo, maximo = LARGO_NOMBRE_CORTO
+    if not minimo <= len(limpio) <= maximo:
+        raise NombreCortoInvalido(
+            f"El nombre corto debe tener de {minimo} a {maximo} caracteres."
+        )
 
     compacto = _compactar(limpio)
     if any(p in compacto for p in _palabras_que_identifican(nombre_responsable)):
@@ -99,3 +109,8 @@ def validar_nombre_corto(
             "El nombre corto no puede llevar la dirección: lo ve el público."
         )
     return limpio
+
+
+def fuera_de_la_zona(latitud: float, longitud: float) -> bool:
+    lat_min, lat_max, lon_min, lon_max = ZONA_ZACATECAS_GUADALUPE
+    return not (lat_min <= latitud <= lat_max and lon_min <= longitud <= lon_max)

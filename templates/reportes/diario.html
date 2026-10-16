@@ -3,6 +3,8 @@
 
 {% block titulo %}Reporte diario · SARRCA{% endblock %}
 
+{% block cabeza %}<link rel="stylesheet" href="{% static 'css/reportes.css' %}">{% endblock %}
+
 {% block contenido %}
 <div>
   <h1 class="titulo-pagina">Reportes</h1>
@@ -10,51 +12,33 @@
 </div>
 
 <nav class="pestanas" aria-label="Tipo de reporte">
-  <a href="/reportes/diario/" aria-current="page">Diario</a>
-  <a href="/reportes/mensual/">Mensual</a>
+  <a href="{% url 'reportes:diario' %}" aria-current="page">Diario</a>
+  <a href="{% url 'reportes:mensual' %}">Mensual</a>
 </nav>
 
-<form class="filtros" method="get" action="/reportes/diario/">
+<form class="filtros" method="get" action="{% url 'reportes:diario' %}">
   <label class="campo">Día
-    <input type="date" name="fecha" value="{{ dia|date:'Y-m-d' }}">
+    <input type="date" name="fecha" value="{{ dia|date:'Y-m-d' }}" max="{% now 'Y-m-d' %}">
   </label>
   <fieldset class="grupo-sensores">
     <legend>Sensores</legend>
     <div class="opciones">
-      {% for nombre in sensores %}
-      <label class="opcion"><input type="checkbox" name="sensores" value="{{ nombre }}" checked>{{ nombre }}</label>
+      {% for sensor in todos %}
+      <label class="opcion"><input type="checkbox" name="sensores" value="{{ sensor.pk }}" {% if sensor.pk in elegidos %}checked{% endif %}>{{ sensor.nombre_corto }}</label>
+      {% empty %}
+      <span class="nota">Todavía no hay sensores registrados.</span>
       {% endfor %}
     </div>
   </fieldset>
   <button type="submit" class="boton boton-primario">Ver reporte</button>
 </form>
 
-<section class="tarjeta" aria-labelledby="titulo-reporte">
-  <div class="encabezado-reporte">
-    <h2 id="titulo-reporte">Reporte diario · {{ titulo_dia }}</h2>
-    <span class="nota">Hora local</span>
-  </div>
+<div class="navegacion-dias">
+  <a class="boton" href="{{ dia_anterior }}">Día anterior</a>
+  {% if dia_siguiente %}<a class="boton" href="{{ dia_siguiente }}">Día siguiente</a>{% endif %}
+</div>
 
-  {% if es_ejemplo %}
-  <div class="aviso">Gráficas con lecturas de ejemplo: todavía no se leen las lecturas guardadas.</div>
-  {% endif %}
-
-  <div class="rejilla-graficas">
-    {% for grafica in graficas %}
-    <figure class="grafica">
-      <figcaption>
-        <span class="grafica-variable">{{ grafica.etiqueta }}</span>
-        <span class="grafica-unidad">{{ grafica.unidad }} · cada lectura del día</span>
-      </figcaption>
-      <div class="grafica-lienzo">
-        <canvas id="grafica-{{ grafica.variable }}" role="img" aria-label="{{ grafica.etiqueta }} de cada sensor el {{ titulo_dia }}, de 00:00 a 23:59"></canvas>
-      </div>
-    </figure>
-    {% endfor %}
-  </div>
-</section>
-
-{{ graficas|json_script:"series" }}
+{% include "reportes/_lamina_diaria.html" %}
 {% endblock %}
 
 {% block scripts %}

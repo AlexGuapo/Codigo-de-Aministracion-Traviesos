@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Reporte mensual · SARRCA{% endblock %}
+
+{% block cabeza %}
+<link rel="stylesheet" href="{% static 'css/reportes.css' %}">
+<link rel="stylesheet" href="{% static 'css/mensual.css' %}">
+{% endblock %}
+
+{% block contenido %}
+<div>
+  <h1 class="titulo-pagina">Reportes</h1>
+  <p class="subtitulo">Calculados con la NOM-025-SSA1-2021. Cada sensor se calcula por separado.</p>
+</div>
+
+<nav class="pestanas" aria-label="Tipo de reporte">
+  <a href="{% url 'reportes:diario' %}">Diario</a>
+  <a href="{% url 'reportes:mensual' %}" aria-current="page">Mensual</a>
+</nav>
+
+<form class="filtros" method="get" action="{% url 'reportes:mensual' %}">
+  <label class="campo">Mes
+    <input type="month" name="mes" value="{{ mes_valor }}" max="{% now 'Y-m' %}">
+  </label>
+  <fieldset class="grupo-sensores">
+    <legend>Sensores</legend>
+    <div class="opciones">
+      {% for sensor in todos %}
+      <label class="opcion"><input type="checkbox" name="sensores" value="{{ sensor.pk }}" {% if sensor.pk in ids_elegidos %}checked{% endif %}>{{ sensor.nombre_corto }}</label>
+      {% empty %}
+      <span class="nota">Todavía no hay sensores registrados.</span>
+      {% endfor %}
+    </div>
+  </fieldset>
+  <button type="submit" class="boton boton-primario">Ver reporte</button>
+</form>
+
+<section class="tarjeta" aria-labelledby="titulo-mes">
+  <div class="encabezado-reporte">
+    <h2 id="titulo-mes">Reporte mensual · {{ titulo_mes }}</h2>
+    <span class="nota">Hora local</span>
+  </div>
+
+  {% if en_curso %}
+  <p class="aviso">Mes en curso: {% if datos_hasta %}datos hasta el día {{ datos_hasta.day }}{% else %}todavía no cierra ningún día{% endif %}. Los valores son parciales.</p>
+  {% endif %}
+  {% if actualizando %}
+  <p class="aviso">Actualizando: llegaron lecturas de este mes que todavía se están calculando.</p>
+  {% endif %}
+
+  {% if not laminas %}
+  <p class="aviso">Ningún sensor elegido tiene lecturas en este mes.</p>
+  {% else %}
+  <div class="tabla-desplazable">
+    <table class="tabla">
+      <caption>Promedio mensual (promedio de los días válidos)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Variable</th>
+          {% for sensor in elegidos %}<th scope="col">{{ sensor.nombre_corto }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for fila in filas_promedio %}
+        <tr>
+          <th scope="row">{{ fila.etiqueta }}</th>
+          {% for celda in fila.celdas %}<td{% if celda.resultado.promedio_entero is None %} class="sin-dato"{% endif %}>{{ celda.texto }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+        <tr>
+          <th scope="row">Días con medición</th>
+          {% for dias in dias_con_medicion %}<td>{{ dias }}</td>{% endfor %}
+        </tr>
+        {% for fila in filas_limite %}
+        <tr>
+          <th scope="row">Días válidos de {{ fila.etiqueta }}</th>
+          {% for dias in fila.dias_validos %}<td>{{ dias }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+        {% for fila in filas_limite %}
+        <tr>
+          <th scope="row">Días con excedencia de {{ fila.etiqueta }}</th>
+          {% for excedencia in fila.excedencias %}
+          <td>{{ excedencia.cuantas }}{% if excedencia.cuantas %}<span class="nota-celda">{{ excedencia.cuales }}</span>{% endif %}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% if limites %}
+  <div class="tabla-desplazable">
+    <table class="tabla tabla-limites">
+      <caption>Límites de la NOM-025 vigentes al {{ ultimo_dia|date:"d/m/Y" }}, sin veredicto</caption>
+      <thead><tr><th scope="col">Contaminante</th><th scope="col">24 horas</th><th scope="col">Anual</th></tr></thead>
+      <tbody>
+        {% for fila in limites %}
+        <tr>
+          <th scope="row">{{ fila.etiqueta }}</th>
+          <td>{% if fila.dia %}{{ fila.dia.valor|floatformat:0 }} {{ fila.dia.unidad }}{% else %}—{% endif %}</td>
+          <td>{% if fila.anual %}{{ fila.anual.valor|floatformat:0 }} {{ fila.anual.unidad }}{% else %}—{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="nota">La NOM-025 todavía no regía en este mes: no hay límites con qué compararlo.</p>
+  {% endif %}
+  <p class="nota">La norma no fija un límite mensual: el promedio del mes es informativo. Cada día se compara con el límite de 24 h vigente en su fecha; una excedencia no significa incumplir la norma.</p>
+  {% endif %}
+</section>
+
+{% if laminas %}
+<h2 class="titulo-laminas">Una lámina por día</h2>
+{% url 'reportes:lamina' as url_lamina %}
+{% for lamina in laminas %}
+<section class="tarjeta lamina-pendiente" hx-get="{{ url_lamina }}{{ lamina.url }}" hx-trigger="revealed" hx-swap="outerHTML">
+  Cargando el {{ lamina.dia|date:"d/m/Y" }}…
+</section>
+{% endfor %}
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'vendor/chartjs/chart.umd.min.js' %}"></script>
+<script src="{% static 'js/graficas.js' %}"></script>
+{% endblock %}
