@@ -42,16 +42,16 @@ class Cuenta(AbstractBaseUser):
     porque otras tablas la citan.
     """
 
-    correo = models.EmailField(max_length=254, null=True, unique=True)
-    nombre = models.CharField(max_length=150, null=True)
+    correo = models.EmailField(max_length=254, null=True, blank=True, unique=True)
+    nombre = models.CharField(max_length=150, null=True, blank=True)
     colonia = models.ForeignKey(
-        "sensores.Colonia", on_delete=models.PROTECT, null=True, related_name="cuentas"
+        "sensores.Colonia", on_delete=models.PROTECT, null=True, blank=True, related_name="cuentas"
     )
     rol = models.CharField(max_length=20, choices=Rol.choices)
     estado = models.CharField(max_length=15, choices=Estado.choices)
     origen = models.CharField(max_length=20, choices=Origen.choices)
-    aviso_privacidad_version = models.CharField(max_length=20, null=True)
-    aviso_privacidad_aceptado_en = models.DateTimeField(null=True)
+    aviso_privacidad_version = models.CharField(max_length=20, null=True, blank=True)
+    aviso_privacidad_aceptado_en = models.DateTimeField(null=True, blank=True)
     creada_en = models.DateTimeField(db_default=Now())
     actualizada_en = models.DateTimeField(db_default=Now())
 
@@ -119,7 +119,7 @@ class IntentoAcceso(models.Model):
 
     correo_intentado = models.CharField(max_length=254)
     cuenta = models.ForeignKey(
-        Cuenta, on_delete=models.PROTECT, null=True, related_name="intentos_acceso"
+        Cuenta, on_delete=models.PROTECT, null=True, blank=True, related_name="intentos_acceso"
     )
     ip = models.GenericIPAddressField()
     exito = models.BooleanField()

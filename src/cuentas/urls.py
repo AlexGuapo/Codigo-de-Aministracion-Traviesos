@@ -1,5 +1,11 @@
-"""Rutas de `cuentas`."""
+from django.urls import path
+
+from cuentas import views
 
 app_name = "cuentas"
 
-urlpatterns: list = []
+urlpatterns = [
+    path("entrar/", views.entrar, name="entrar"),
+    path("salir/", views.salir, name="salir"),
+    path("inicio/", views.inicio, name="inicio"),
+]

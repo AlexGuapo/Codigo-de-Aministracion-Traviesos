@@ -396,3 +396,31 @@ a {
   font-size: 12px;
   font-weight: 500;
 }
+
+/* Inicio de sesión */
+.tarjeta-acceso {
+  width: 100%;
+  max-width: 420px;
+  margin: 24px auto;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.formulario .campo input {
+  width: 100%;
+}
+.formulario .boton {
+  justify-content: center;
+}
+.error-formulario {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fbe9e7;
+  color: #8c2a1c;
+  font-size: 14px;
+}
+.usuario form {
+  margin: 0;
+}

@@ -1,0 +1,5447 @@
+[
+ {
+  "model": "sensores.colonia",
+  "pk": 1,
+  "fields": {
+   "nombre": "21 de Julio",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 2,
+  "fields": {
+   "nombre": "5 Señores",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 3,
+  "fields": {
+   "nombre": "Agrónoma II (Agronómica)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 4,
+  "fields": {
+   "nombre": "Agrónomo",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 5,
+  "fields": {
+   "nombre": "Alma Obrera",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 6,
+  "fields": {
+   "nombre": "América",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 7,
+  "fields": {
+   "nombre": "Argenta Residencial",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 8,
+  "fields": {
+   "nombre": "Arquitectos",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 9,
+  "fields": {
+   "nombre": "Arturo Romo Macias",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 10,
+  "fields": {
+   "nombre": "Ayuntamiento",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 11,
+  "fields": {
+   "nombre": "Bancomer",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 12,
+  "fields": {
+   "nombre": "Barros Sierra",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 13,
+  "fields": {
+   "nombre": "Bellavista",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 14,
+  "fields": {
+   "nombre": "Benito Juárez",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 15,
+  "fields": {
+   "nombre": "Benito Juárez (San Cayetano)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 16,
+  "fields": {
+   "nombre": "Bosque de las Cumbres",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 17,
+  "fields": {
+   "nombre": "Boulevares",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 18,
+  "fields": {
+   "nombre": "Bracho (Lomas de Bracho)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 19,
+  "fields": {
+   "nombre": "Buenavista",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 20,
+  "fields": {
+   "nombre": "Buenos Aires",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 21,
+  "fields": {
+   "nombre": "Calerilla",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 22,
+  "fields": {
+   "nombre": "Caminera",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 23,
+  "fields": {
+   "nombre": "Camino Real",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 24,
+  "fields": {
+   "nombre": "Carlos Hinojosa Petit",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 25,
+  "fields": {
+   "nombre": "Casa Blanca",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 26,
+  "fields": {
+   "nombre": "Cerrada del Ángel",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 27,
+  "fields": {
+   "nombre": "Cerro de la Virgen",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 28,
+  "fields": {
+   "nombre": "Cieneguillas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 29,
+  "fields": {
+   "nombre": "Ciudad Argentum",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 30,
+  "fields": {
+   "nombre": "Ciudad Gobierno",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 31,
+  "fields": {
+   "nombre": "Ciudad Universitaria",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 32,
+  "fields": {
+   "nombre": "CNOP",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 33,
+  "fields": {
+   "nombre": "Colinas del Padre",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 34,
+  "fields": {
+   "nombre": "Colinas del Sol",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 35,
+  "fields": {
+   "nombre": "Colinas del Vergel",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 36,
+  "fields": {
+   "nombre": "Colonial Zacatecas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 37,
+  "fields": {
+   "nombre": "Conquistadores",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 38,
+  "fields": {
+   "nombre": "Constelaciones",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 39,
+  "fields": {
+   "nombre": "Cumbres",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 40,
+  "fields": {
+   "nombre": "De Los Taxista",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 41,
+  "fields": {
+   "nombre": "De Los Taxista 2da. Sección",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 42,
+  "fields": {
+   "nombre": "De Olivos",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 43,
+  "fields": {
+   "nombre": "Del Bosque",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 44,
+  "fields": {
+   "nombre": "DIF",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 45,
+  "fields": {
+   "nombre": "El Chaveño",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 46,
+  "fields": {
+   "nombre": "El Diamante",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 47,
+  "fields": {
+   "nombre": "El Jaralillo",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 48,
+  "fields": {
+   "nombre": "El Maguey",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 49,
+  "fields": {
+   "nombre": "El Mirador",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 50,
+  "fields": {
+   "nombre": "El Molino",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 51,
+  "fields": {
+   "nombre": "El Orito",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 52,
+  "fields": {
+   "nombre": "El Orito 1a Sección",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 53,
+  "fields": {
+   "nombre": "Emiliano Zapata",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 54,
+  "fields": {
+   "nombre": "España",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 55,
+  "fields": {
+   "nombre": "Estrella de Oro",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 56,
+  "fields": {
+   "nombre": "Europa",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 57,
+  "fields": {
+   "nombre": "Ex Hacienda Bernardez",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 58,
+  "fields": {
+   "nombre": "Felipe Ángeles",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 59,
+  "fields": {
+   "nombre": "Fernando Pamanes Escobedo",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 60,
+  "fields": {
+   "nombre": "Filósofos",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 61,
+  "fields": {
+   "nombre": "Fovissste",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 62,
+  "fields": {
+   "nombre": "Francisco E. García",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 63,
+  "fields": {
+   "nombre": "Francisco I. Madero",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 64,
+  "fields": {
+   "nombre": "Frente Popular",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 65,
+  "fields": {
+   "nombre": "Fuente Del Bosque",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 66,
+  "fields": {
+   "nombre": "García de la Cadena (El Visitador)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 67,
+  "fields": {
+   "nombre": "García Salinas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 68,
+  "fields": {
+   "nombre": "Gonzalo García García",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 69,
+  "fields": {
+   "nombre": "González Ortega (Machines)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 70,
+  "fields": {
+   "nombre": "Gustavo Díaz Ordaz 1ra. Sección",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 71,
+  "fields": {
+   "nombre": "Gustavo Díaz Ordaz 2da. Sección",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 72,
+  "fields": {
+   "nombre": "Gustavo Díaz Ordaz 3ra. Sección",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 73,
+  "fields": {
+   "nombre": "Hidráulica",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 74,
+  "fields": {
+   "nombre": "Huerta Vieja",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 75,
+  "fields": {
+   "nombre": "Héroes de Chapultepec",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 76,
+  "fields": {
+   "nombre": "Insurgentes",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 77,
+  "fields": {
+   "nombre": "ISSSTEZAC I",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 78,
+  "fields": {
+   "nombre": "Italia",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 79,
+  "fields": {
+   "nombre": "J. Jesús González Ortega",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 80,
+  "fields": {
+   "nombre": "Korea I",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 81,
+  "fields": {
+   "nombre": "Korea II",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 82,
+  "fields": {
+   "nombre": "La Encantada",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 83,
+  "fields": {
+   "nombre": "La Escondida",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 84,
+  "fields": {
+   "nombre": "La Herradura",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 85,
+  "fields": {
+   "nombre": "La Isabelica",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 86,
+  "fields": {
+   "nombre": "La Loma",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 87,
+  "fields": {
+   "nombre": "La Peñuela",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 88,
+  "fields": {
+   "nombre": "La Pimienta",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 89,
+  "fields": {
+   "nombre": "La Pinta",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 90,
+  "fields": {
+   "nombre": "La Soledad (La Chole)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 91,
+  "fields": {
+   "nombre": "La Toma de Zacatecas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 92,
+  "fields": {
+   "nombre": "Ladrilleras",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 93,
+  "fields": {
+   "nombre": "Las Boquillas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 94,
+  "fields": {
+   "nombre": "Las Chilitas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 95,
+  "fields": {
+   "nombre": "Las Colinas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 96,
+  "fields": {
+   "nombre": "Las Cumbres",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 97,
+  "fields": {
+   "nombre": "Las Flores (CP 98085)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 98,
+  "fields": {
+   "nombre": "Las Flores (CP 98087)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 99,
+  "fields": {
+   "nombre": "Las Flores (CP 98099)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 100,
+  "fields": {
+   "nombre": "Las Haciendas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 101,
+  "fields": {
+   "nombre": "Las Huertas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 102,
+  "fields": {
+   "nombre": "Las Mercedes",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 103,
+  "fields": {
+   "nombre": "Las Palmas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 104,
+  "fields": {
+   "nombre": "Libertadores",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 105,
+  "fields": {
+   "nombre": "Loma Barroca",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 106,
+  "fields": {
+   "nombre": "Loma Escondida",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 107,
+  "fields": {
+   "nombre": "Lomas Bizantinas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 108,
+  "fields": {
+   "nombre": "Lomas de Cristo",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 109,
+  "fields": {
+   "nombre": "Lomas de La Pimienta",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 110,
+  "fields": {
+   "nombre": "Lomas de La Soledad",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 111,
+  "fields": {
+   "nombre": "Lomas de la Virgen",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 112,
+  "fields": {
+   "nombre": "Lomas de San Francisco",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 113,
+  "fields": {
+   "nombre": "Lomas del Bosque",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 114,
+  "fields": {
+   "nombre": "Lomas Del Campestre",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 115,
+  "fields": {
+   "nombre": "Lomas Del Capulín",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 116,
+  "fields": {
+   "nombre": "Lomas del Lago",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 117,
+  "fields": {
+   "nombre": "Lomas del Patrocinio",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 118,
+  "fields": {
+   "nombre": "Los Caleros",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 119,
+  "fields": {
+   "nombre": "Los Encinos",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 120,
+  "fields": {
+   "nombre": "Los Filarmónicos",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 121,
+  "fields": {
+   "nombre": "Los Periodistas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 122,
+  "fields": {
+   "nombre": "Luis Donaldo Colosio",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 123,
+  "fields": {
+   "nombre": "Lázaro Cárdenas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 124,
+  "fields": {
+   "nombre": "Magisterial Jardines del Sol",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 125,
+  "fields": {
+   "nombre": "Margaritas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 126,
+  "fields": {
+   "nombre": "Marianita",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 127,
+  "fields": {
+   "nombre": "Mecánicos",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 128,
+  "fields": {
+   "nombre": "Mecánicos 2a Secc",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 129,
+  "fields": {
+   "nombre": "Mexicapan",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 130,
+  "fields": {
+   "nombre": "Miguel Hidalgo (San Miguel)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 131,
+  "fields": {
+   "nombre": "Miguel Hidalgo 1ra. Sección",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 132,
+  "fields": {
+   "nombre": "Miguel Hidalgo 2da. Sección",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 133,
+  "fields": {
+   "nombre": "Miguel Hidalgo 3ra. Sección",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 134,
+  "fields": {
+   "nombre": "Militar",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 135,
+  "fields": {
+   "nombre": "Minera",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 136,
+  "fields": {
+   "nombre": "Moradores",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 137,
+  "fields": {
+   "nombre": "Médicos Veterinarios",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 138,
+  "fields": {
+   "nombre": "Nueva Boquillas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 139,
+  "fields": {
+   "nombre": "Nueva Generación",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 140,
+  "fields": {
+   "nombre": "Ojo de Agua de Meléndez (Ojo de Agua)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 141,
+  "fields": {
+   "nombre": "Paseos del Valle",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 142,
+  "fields": {
+   "nombre": "Pedro Ruiz González INFONAVIT",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 143,
+  "fields": {
+   "nombre": "Peñas de la Virgen",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 144,
+  "fields": {
+   "nombre": "Picones",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 145,
+  "fields": {
+   "nombre": "Popular CTM",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 146,
+  "fields": {
+   "nombre": "Portal del Roble",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 147,
+  "fields": {
+   "nombre": "Portasol",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 148,
+  "fields": {
+   "nombre": "Primavera",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 149,
+  "fields": {
+   "nombre": "Privada Aziz",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 150,
+  "fields": {
+   "nombre": "Privada del Bosque",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 151,
+  "fields": {
+   "nombre": "Privada del Padre",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 152,
+  "fields": {
+   "nombre": "Privada Esmeralda",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 153,
+  "fields": {
+   "nombre": "Privada Monte Bello",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 154,
+  "fields": {
+   "nombre": "Privada Monte Real",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 155,
+  "fields": {
+   "nombre": "Privada Residencial San Pedro",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 156,
+  "fields": {
+   "nombre": "Progreso",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 157,
+  "fields": {
+   "nombre": "Pánfilo Natera",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 158,
+  "fields": {
+   "nombre": "Ramón López Velarde",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 159,
+  "fields": {
+   "nombre": "Rancho Nuevo",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 160,
+  "fields": {
+   "nombre": "Residencial Cantera",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 161,
+  "fields": {
+   "nombre": "Residencial Del Valle",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 162,
+  "fields": {
+   "nombre": "Residencial La Joya",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 163,
+  "fields": {
+   "nombre": "Ricardo Flores Magón",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 164,
+  "fields": {
+   "nombre": "Rinconada de La Isabelica",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 165,
+  "fields": {
+   "nombre": "San Andrés",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 166,
+  "fields": {
+   "nombre": "San Antonio de los Negros (Los Negros)",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 167,
+  "fields": {
+   "nombre": "San Fernando",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 168,
+  "fields": {
+   "nombre": "San Francisco de Herrera",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 169,
+  "fields": {
+   "nombre": "San Francisco de la Montaña",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 170,
+  "fields": {
+   "nombre": "San Gabriel",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 171,
+  "fields": {
+   "nombre": "San Rafael",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 172,
+  "fields": {
+   "nombre": "Santos Bañuelos",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 173,
+  "fields": {
+   "nombre": "Sierra de Alica",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 174,
+  "fields": {
+   "nombre": "Siglo XXI",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 175,
+  "fields": {
+   "nombre": "Suave Patria",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 176,
+  "fields": {
+   "nombre": "Tahona",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 177,
+  "fields": {
+   "nombre": "Tecnológica",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 178,
+  "fields": {
+   "nombre": "Tres Cruces INFONAVIT",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 179,
+  "fields": {
+   "nombre": "UAZ \"Francisco García Salinas\" Siglo XXI",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 180,
+  "fields": {
+   "nombre": "Unidad Deportiva",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 181,
+  "fields": {
+   "nombre": "Universidad Autónoma de Zacatecas",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 182,
+  "fields": {
+   "nombre": "Valle Real",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 183,
+  "fields": {
+   "nombre": "Villa Antigua",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 184,
+  "fields": {
+   "nombre": "Villa Verde",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 185,
+  "fields": {
+   "nombre": "Villas del Padre",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 186,
+  "fields": {
+   "nombre": "Villas Del Sol",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 187,
+  "fields": {
+   "nombre": "Villas Del Tepozan",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 188,
+  "fields": {
+   "nombre": "Villas Universidad",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 189,
+  "fields": {
+   "nombre": "Zacatecas Centro",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 190,
+  "fields": {
+   "nombre": "Zacatlán",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 191,
+  "fields": {
+   "nombre": "Úrsulo A. García",
+   "municipio": "Zacatecas",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 192,
+  "fields": {
+   "nombre": "13 de Octubre",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 193,
+  "fields": {
+   "nombre": "1910",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 194,
+  "fields": {
+   "nombre": "Ampliación Arboledas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 195,
+  "fields": {
+   "nombre": "Ampliación Campesina",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 196,
+  "fields": {
+   "nombre": "Ampliación Independencia",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 197,
+  "fields": {
+   "nombre": "Ampliación Minas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 198,
+  "fields": {
+   "nombre": "Américas 4",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 199,
+  "fields": {
+   "nombre": "Andador Ferrocarril",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 200,
+  "fields": {
+   "nombre": "Antorcha Campesina",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 201,
+  "fields": {
+   "nombre": "Arbolada Residencial",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 202,
+  "fields": {
+   "nombre": "Arcoiris",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 203,
+  "fields": {
+   "nombre": "Arte Mexicano",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 204,
+  "fields": {
+   "nombre": "Barrio de Los Moros",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 205,
+  "fields": {
+   "nombre": "Bañuelos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 206,
+  "fields": {
+   "nombre": "Bellavista",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 207,
+  "fields": {
+   "nombre": "Bonaterra",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 208,
+  "fields": {
+   "nombre": "Bonito Pueblo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 209,
+  "fields": {
+   "nombre": "Brisas del Campo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 210,
+  "fields": {
+   "nombre": "California",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 211,
+  "fields": {
+   "nombre": "California II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 212,
+  "fields": {
+   "nombre": "Camilo Torres",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 213,
+  "fields": {
+   "nombre": "Camino Real",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 214,
+  "fields": {
+   "nombre": "Campestre San José",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 215,
+  "fields": {
+   "nombre": "Campo Bravo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 216,
+  "fields": {
+   "nombre": "Campo Real",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 217,
+  "fields": {
+   "nombre": "Carlos Fuentes",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 218,
+  "fields": {
+   "nombre": "Casa Blanca",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 219,
+  "fields": {
+   "nombre": "Casas Coloradas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 220,
+  "fields": {
+   "nombre": "Cañada de Bernárdez",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 221,
+  "fields": {
+   "nombre": "Cañada de La Bufa",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 222,
+  "fields": {
+   "nombre": "Cañada de la Laguna II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 223,
+  "fields": {
+   "nombre": "Cañada del Sol",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 224,
+  "fields": {
+   "nombre": "Cieneguitas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 225,
+  "fields": {
+   "nombre": "Complejo de Naves Industriales la Zacatecana",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 226,
+  "fields": {
+   "nombre": "Conde de Bernardez",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 227,
+  "fields": {
+   "nombre": "Conquistadores",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 228,
+  "fields": {
+   "nombre": "Coto Terranova",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 229,
+  "fields": {
+   "nombre": "Cresta Ferra",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 230,
+  "fields": {
+   "nombre": "Culturas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 231,
+  "fields": {
+   "nombre": "De la Estación",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 232,
+  "fields": {
+   "nombre": "De Loreto",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 233,
+  "fields": {
+   "nombre": "Del Agua",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 234,
+  "fields": {
+   "nombre": "Del Carmen",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 235,
+  "fields": {
+   "nombre": "Del Parque",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 236,
+  "fields": {
+   "nombre": "Dependencias Federales",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 237,
+  "fields": {
+   "nombre": "División del Norte",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 238,
+  "fields": {
+   "nombre": "Doroteo Arango",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 239,
+  "fields": {
+   "nombre": "Ejidal",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 240,
+  "fields": {
+   "nombre": "El Bordito",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 241,
+  "fields": {
+   "nombre": "El Bordo de Buenavista (El Bordo)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 242,
+  "fields": {
+   "nombre": "El Dorado",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 243,
+  "fields": {
+   "nombre": "El Hípico",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 244,
+  "fields": {
+   "nombre": "El Maguey",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 245,
+  "fields": {
+   "nombre": "El Mastranto",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 246,
+  "fields": {
+   "nombre": "El Mezquital",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 247,
+  "fields": {
+   "nombre": "El Montecito",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 248,
+  "fields": {
+   "nombre": "El Paraíso",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 249,
+  "fields": {
+   "nombre": "El Pescado",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 250,
+  "fields": {
+   "nombre": "El Pirular",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 251,
+  "fields": {
+   "nombre": "El Rosal",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 252,
+  "fields": {
+   "nombre": "El Salero",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 253,
+  "fields": {
+   "nombre": "El Triángulo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 254,
+  "fields": {
+   "nombre": "El Universo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 255,
+  "fields": {
+   "nombre": "Emiliano Zapata",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 256,
+  "fields": {
+   "nombre": "Escritores",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 257,
+  "fields": {
+   "nombre": "Ferrocarrileros",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 258,
+  "fields": {
+   "nombre": "FIRCO",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 259,
+  "fields": {
+   "nombre": "FOVISSSTE",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 260,
+  "fields": {
+   "nombre": "Francisco E. García (Los Rancheros)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 261,
+  "fields": {
+   "nombre": "Francisco García Salinas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 262,
+  "fields": {
+   "nombre": "Francisco Villa",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 263,
+  "fields": {
+   "nombre": "Frente Popular",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 264,
+  "fields": {
+   "nombre": "Fuentes del Cobre",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 265,
+  "fields": {
+   "nombre": "Galerías",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 266,
+  "fields": {
+   "nombre": "Ganaderos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 267,
+  "fields": {
+   "nombre": "Gardenias",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 268,
+  "fields": {
+   "nombre": "Gavilanes",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 269,
+  "fields": {
+   "nombre": "General Emiliano Zapata (La Cocinera)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 270,
+  "fields": {
+   "nombre": "Grupo Tendencia Sindical",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 271,
+  "fields": {
+   "nombre": "Guadalupe Centro",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 272,
+  "fields": {
+   "nombre": "Guadalupe Colonial",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 273,
+  "fields": {
+   "nombre": "Guadalupe Industrial",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 274,
+  "fields": {
+   "nombre": "Guadalupe Moderno",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 275,
+  "fields": {
+   "nombre": "Hacienda Valle Dorado",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 276,
+  "fields": {
+   "nombre": "Ignacio Allende",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 277,
+  "fields": {
+   "nombre": "INDECO Arroyo de la Plata",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 278,
+  "fields": {
+   "nombre": "Independencia",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 279,
+  "fields": {
+   "nombre": "ISSSTEZAC",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 280,
+  "fields": {
+   "nombre": "Jardines de Bernardez",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 281,
+  "fields": {
+   "nombre": "Jardines de Sauceda",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 282,
+  "fields": {
+   "nombre": "Jardines del Sol",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 283,
+  "fields": {
+   "nombre": "Jardines del Sol II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 284,
+  "fields": {
+   "nombre": "Jesús Pérez Cuevas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 285,
+  "fields": {
+   "nombre": "Jorge Obispo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 286,
+  "fields": {
+   "nombre": "Justo Sierra",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 287,
+  "fields": {
+   "nombre": "La Bufa I",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 288,
+  "fields": {
+   "nombre": "La Bufa II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 289,
+  "fields": {
+   "nombre": "La Campesina",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 290,
+  "fields": {
+   "nombre": "La Cantera (CP 98606)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 291,
+  "fields": {
+   "nombre": "La Cantera (CP 98616)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 292,
+  "fields": {
+   "nombre": "La Cañada",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 293,
+  "fields": {
+   "nombre": "La Cañada II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 294,
+  "fields": {
+   "nombre": "La Cañada III",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 295,
+  "fields": {
+   "nombre": "La Cima",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 296,
+  "fields": {
+   "nombre": "La Comarca",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 297,
+  "fields": {
+   "nombre": "La Condesa",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 298,
+  "fields": {
+   "nombre": "La Esperanza",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 299,
+  "fields": {
+   "nombre": "La Estación",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 300,
+  "fields": {
+   "nombre": "La Fe",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 301,
+  "fields": {
+   "nombre": "La Florida",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 302,
+  "fields": {
+   "nombre": "La Ladrillera",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 303,
+  "fields": {
+   "nombre": "La Luz",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 304,
+  "fields": {
+   "nombre": "La Martinica",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 305,
+  "fields": {
+   "nombre": "La Palma",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 306,
+  "fields": {
+   "nombre": "La Providencia",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 307,
+  "fields": {
+   "nombre": "La Purísima",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 308,
+  "fields": {
+   "nombre": "La Toscana",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 309,
+  "fields": {
+   "nombre": "La Victoria",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 310,
+  "fields": {
+   "nombre": "La Villa",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 311,
+  "fields": {
+   "nombre": "La Zacatecana",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 312,
+  "fields": {
+   "nombre": "Laguna de Arriba",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 313,
+  "fields": {
+   "nombre": "Laguna Honda",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 314,
+  "fields": {
+   "nombre": "Las Américas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 315,
+  "fields": {
+   "nombre": "Las Arboledas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 316,
+  "fields": {
+   "nombre": "Las Flores (CP 98605)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 317,
+  "fields": {
+   "nombre": "Las Flores (CP 98612)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 318,
+  "fields": {
+   "nombre": "Las Fuentes",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 319,
+  "fields": {
+   "nombre": "Las Haciendas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 320,
+  "fields": {
+   "nombre": "Las Joyas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 321,
+  "fields": {
+   "nombre": "Las Lomas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 322,
+  "fields": {
+   "nombre": "Las Lomas II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 323,
+  "fields": {
+   "nombre": "Las Orquídeas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 324,
+  "fields": {
+   "nombre": "Las Quintas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 325,
+  "fields": {
+   "nombre": "Las Torres",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 326,
+  "fields": {
+   "nombre": "Lindavista",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 327,
+  "fields": {
+   "nombre": "Lo de Vega",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 328,
+  "fields": {
+   "nombre": "Loma Bonita",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 329,
+  "fields": {
+   "nombre": "Lomas de Bernardez",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 330,
+  "fields": {
+   "nombre": "Lomas de Bernárdez Sección Plata",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 331,
+  "fields": {
+   "nombre": "Lomas de Britania",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 332,
+  "fields": {
+   "nombre": "Lomas de Galicia",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 333,
+  "fields": {
+   "nombre": "Lomas de Guadalupe",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 334,
+  "fields": {
+   "nombre": "Lomas de Guadalupe (La Oreja)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 335,
+  "fields": {
+   "nombre": "Lomas de San Cristóbal",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 336,
+  "fields": {
+   "nombre": "Lomas del Consuelo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 337,
+  "fields": {
+   "nombre": "Lomas del Convento",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 338,
+  "fields": {
+   "nombre": "Lomas del Pedregal",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 339,
+  "fields": {
+   "nombre": "Lomas del Valle",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 340,
+  "fields": {
+   "nombre": "Los Conventos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 341,
+  "fields": {
+   "nombre": "Los Conventos II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 342,
+  "fields": {
+   "nombre": "Los Frailes",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 343,
+  "fields": {
+   "nombre": "Los Geranios",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 344,
+  "fields": {
+   "nombre": "Los Pirules",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 345,
+  "fields": {
+   "nombre": "Los Portales",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 346,
+  "fields": {
+   "nombre": "Los Prados",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 347,
+  "fields": {
+   "nombre": "Los Sauces",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 348,
+  "fields": {
+   "nombre": "Los Tepetates",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 349,
+  "fields": {
+   "nombre": "Los Ángeles",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 350,
+  "fields": {
+   "nombre": "Luis Donaldo Colosio",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 351,
+  "fields": {
+   "nombre": "Magisterial Pedro Ruiz González",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 352,
+  "fields": {
+   "nombre": "Magisterio",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 353,
+  "fields": {
+   "nombre": "Manuel M. Ponce",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 354,
+  "fields": {
+   "nombre": "Margaritas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 355,
+  "fields": {
+   "nombre": "Martínez Domínguez",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 356,
+  "fields": {
+   "nombre": "Mexicana de Aviación",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 357,
+  "fields": {
+   "nombre": "Mezquitillos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 358,
+  "fields": {
+   "nombre": "Militar",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 359,
+  "fields": {
+   "nombre": "Mina Azul",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 360,
+  "fields": {
+   "nombre": "Minas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 361,
+  "fields": {
+   "nombre": "Minas del Real",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 362,
+  "fields": {
+   "nombre": "Montebello",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 363,
+  "fields": {
+   "nombre": "Montes Azules",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 364,
+  "fields": {
+   "nombre": "Novelistas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 365,
+  "fields": {
+   "nombre": "Nueva Generación",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 366,
+  "fields": {
+   "nombre": "Nuevo Bernardez",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 367,
+  "fields": {
+   "nombre": "Nuevo Mercurio",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 368,
+  "fields": {
+   "nombre": "Nuevo San Judas Tadeo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 369,
+  "fields": {
+   "nombre": "Octavio Paz",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 370,
+  "fields": {
+   "nombre": "Ojo de Agua",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 371,
+  "fields": {
+   "nombre": "Ojo de Agua de La Palma",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 372,
+  "fields": {
+   "nombre": "Olimpia",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 373,
+  "fields": {
+   "nombre": "Osiris",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 374,
+  "fields": {
+   "nombre": "Parque Industrial Guadalupe",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 375,
+  "fields": {
+   "nombre": "Paseo Real",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 376,
+  "fields": {
+   "nombre": "Popular del Bosque",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 377,
+  "fields": {
+   "nombre": "Popular San Francisco",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 378,
+  "fields": {
+   "nombre": "Primero de Mayo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 379,
+  "fields": {
+   "nombre": "Privada Acqua",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 380,
+  "fields": {
+   "nombre": "Privada Aretha",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 381,
+  "fields": {
+   "nombre": "Privada Concordia",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 382,
+  "fields": {
+   "nombre": "Privada Conde Santiago de la Laguna",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 383,
+  "fields": {
+   "nombre": "Privada de las Begonias",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 384,
+  "fields": {
+   "nombre": "Privada de Los Olivos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 385,
+  "fields": {
+   "nombre": "Privada del Bosque",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 386,
+  "fields": {
+   "nombre": "Privada del Santuario",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 387,
+  "fields": {
+   "nombre": "Privada El Salero",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 388,
+  "fields": {
+   "nombre": "Privada Eucaliptos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 389,
+  "fields": {
+   "nombre": "Privada La Esmeralda",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 390,
+  "fields": {
+   "nombre": "Privada la Fé",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 391,
+  "fields": {
+   "nombre": "Privada las Glorias",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 392,
+  "fields": {
+   "nombre": "Privada las Misiones",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 393,
+  "fields": {
+   "nombre": "Privada las Águilas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 394,
+  "fields": {
+   "nombre": "Privada los Manantiales",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 395,
+  "fields": {
+   "nombre": "Privada los Olivares",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 396,
+  "fields": {
+   "nombre": "Privada Portanova",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 397,
+  "fields": {
+   "nombre": "Privada San Andrés",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 398,
+  "fields": {
+   "nombre": "Privada San Antonio",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 399,
+  "fields": {
+   "nombre": "Privada San Charbel",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 400,
+  "fields": {
+   "nombre": "Privada Santa Lucía",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 401,
+  "fields": {
+   "nombre": "Privada Santa María I y II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 402,
+  "fields": {
+   "nombre": "Privada Trueno",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 403,
+  "fields": {
+   "nombre": "Privada Áurea",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 404,
+  "fields": {
+   "nombre": "Progresista",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 405,
+  "fields": {
+   "nombre": "Progreso Nacional",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 406,
+  "fields": {
+   "nombre": "Puerta del Valle",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 407,
+  "fields": {
+   "nombre": "Puerta Dorada",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 408,
+  "fields": {
+   "nombre": "Quinta San Carlos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 409,
+  "fields": {
+   "nombre": "Quinta San Fernando",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 410,
+  "fields": {
+   "nombre": "Quinta San Gabriel",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 411,
+  "fields": {
+   "nombre": "Quinta San Jerónimo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 412,
+  "fields": {
+   "nombre": "Quinta San Nicolás",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 413,
+  "fields": {
+   "nombre": "Quinta San Rafael",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 414,
+  "fields": {
+   "nombre": "Quinta Santa Ana",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 415,
+  "fields": {
+   "nombre": "Quinta Santa Bárbara",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 416,
+  "fields": {
+   "nombre": "Quinta Santa Martha",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 417,
+  "fields": {
+   "nombre": "Quinta Santa María",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 418,
+  "fields": {
+   "nombre": "Quinta Santa Teresita",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 419,
+  "fields": {
+   "nombre": "Ramón López Velarde",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 420,
+  "fields": {
+   "nombre": "Real de San Gabriel",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 421,
+  "fields": {
+   "nombre": "Real de San Ramón",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 422,
+  "fields": {
+   "nombre": "Real del Conde",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 423,
+  "fields": {
+   "nombre": "Real del Sol",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 424,
+  "fields": {
+   "nombre": "Revolución Mexicana",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 425,
+  "fields": {
+   "nombre": "Rinconada de los Pinos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 426,
+  "fields": {
+   "nombre": "Rinconada de Pirules",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 427,
+  "fields": {
+   "nombre": "Rinconada del Edén",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 428,
+  "fields": {
+   "nombre": "Rincón Colonial",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 429,
+  "fields": {
+   "nombre": "Rincón Guadalupano",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 430,
+  "fields": {
+   "nombre": "S.P.A.U.A.Z.",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 431,
+  "fields": {
+   "nombre": "S.T.U.A.Z. (CP 98609)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 432,
+  "fields": {
+   "nombre": "S.T.U.A.Z. (CP 98613)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 433,
+  "fields": {
+   "nombre": "San Agustín",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 434,
+  "fields": {
+   "nombre": "San Agustín III",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 435,
+  "fields": {
+   "nombre": "San Cosme",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 436,
+  "fields": {
+   "nombre": "San Ignacio",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 437,
+  "fields": {
+   "nombre": "San Isidro",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 438,
+  "fields": {
+   "nombre": "San Isidro Bocanegra",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 439,
+  "fields": {
+   "nombre": "San Jerónimo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 440,
+  "fields": {
+   "nombre": "San José (Ampliación Lo de Vega)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 441,
+  "fields": {
+   "nombre": "San José de la Piedrera",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 442,
+  "fields": {
+   "nombre": "San Miguel",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 443,
+  "fields": {
+   "nombre": "San Miguel del Cortijo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 444,
+  "fields": {
+   "nombre": "San Ramón (CP 98606)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 445,
+  "fields": {
+   "nombre": "San Ramón (CP 98652)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 446,
+  "fields": {
+   "nombre": "San Telmo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 447,
+  "fields": {
+   "nombre": "Santa Cecilia",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 448,
+  "fields": {
+   "nombre": "Santa Fe",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 449,
+  "fields": {
+   "nombre": "Santa Mónica",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 450,
+  "fields": {
+   "nombre": "Santa Rita (CP 98600)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 451,
+  "fields": {
+   "nombre": "Santa Rita (CP 98610)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 452,
+  "fields": {
+   "nombre": "Santa Rita (CP 98612)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 453,
+  "fields": {
+   "nombre": "Sector Santa Engracia",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 454,
+  "fields": {
+   "nombre": "SNTAS",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 455,
+  "fields": {
+   "nombre": "Solidaridad (José Ives Limantour)",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 456,
+  "fields": {
+   "nombre": "SUTSEMOP",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 457,
+  "fields": {
+   "nombre": "Tacoaleche",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 458,
+  "fields": {
+   "nombre": "Terralta",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 459,
+  "fields": {
+   "nombre": "Tierra y Libertad 1ra. Sección",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 460,
+  "fields": {
+   "nombre": "Tierra y Libertad 2da. Sección",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 461,
+  "fields": {
+   "nombre": "Tierra y Libertad 3ra. Sección",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 462,
+  "fields": {
+   "nombre": "Toma de Zacatecas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 463,
+  "fields": {
+   "nombre": "Tonatiuh Magisterial",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 464,
+  "fields": {
+   "nombre": "U.A.Z.",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 465,
+  "fields": {
+   "nombre": "Unidad Deportiva",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 466,
+  "fields": {
+   "nombre": "Valle Chicomóztoc",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 467,
+  "fields": {
+   "nombre": "Valle de los Encinos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 468,
+  "fields": {
+   "nombre": "Valle del Conde",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 469,
+  "fields": {
+   "nombre": "Valle los Fresnos",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 470,
+  "fields": {
+   "nombre": "Valles I",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 471,
+  "fields": {
+   "nombre": "Valles II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 472,
+  "fields": {
+   "nombre": "Viboritas",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 473,
+  "fields": {
+   "nombre": "Villa Bugambilias II",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 474,
+  "fields": {
+   "nombre": "Villa Colonial",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 475,
+  "fields": {
+   "nombre": "Villa de las Flores",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 476,
+  "fields": {
+   "nombre": "Villa Fontana Sur",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 477,
+  "fields": {
+   "nombre": "Villa Real",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 478,
+  "fields": {
+   "nombre": "Villafontana",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 479,
+  "fields": {
+   "nombre": "Villas Bugambilias",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 480,
+  "fields": {
+   "nombre": "Villas de Don Fernando",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 481,
+  "fields": {
+   "nombre": "Villas de Guadalupe",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 482,
+  "fields": {
+   "nombre": "Villas de la Coruña",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 483,
+  "fields": {
+   "nombre": "Villas de Nápoles",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 484,
+  "fields": {
+   "nombre": "Villas de San Fermín",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 485,
+  "fields": {
+   "nombre": "Villas del Campo",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 486,
+  "fields": {
+   "nombre": "Villas del Carmen",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 487,
+  "fields": {
+   "nombre": "Villas del Monasterio",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 488,
+  "fields": {
+   "nombre": "Villas del Rey",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 489,
+  "fields": {
+   "nombre": "Villas Joanna",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 490,
+  "fields": {
+   "nombre": "Villas Mariana",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 491,
+  "fields": {
+   "nombre": "Virreyes",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 492,
+  "fields": {
+   "nombre": "Vista Sur",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 493,
+  "fields": {
+   "nombre": "Zona de Colegios e Infraestructura",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 494,
+  "fields": {
+   "nombre": "Zoquite",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ },
+ {
+  "model": "sensores.colonia",
+  "pk": 495,
+  "fields": {
+   "nombre": "África",
+   "municipio": "Guadalupe",
+   "latitud_ref": null,
+   "longitud_ref": null,
+   "activa": true
+  }
+ }
+]

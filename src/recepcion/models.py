@@ -34,10 +34,10 @@ class SolicitudRelleno(models.Model):
         "cuentas.Cuenta", on_delete=models.PROTECT, related_name="rellenos_solicitados"
     )
     solicitada_en = models.DateTimeField(db_default=Now())
-    tomada_en = models.DateTimeField(null=True)
-    terminada_en = models.DateTimeField(null=True)
-    lecturas_nuevas = models.IntegerField(null=True)
-    error = models.CharField(max_length=300, null=True)
+    tomada_en = models.DateTimeField(null=True, blank=True)
+    terminada_en = models.DateTimeField(null=True, blank=True)
+    lecturas_nuevas = models.IntegerField(null=True, blank=True)
+    error = models.CharField(max_length=300, null=True, blank=True)
 
     class Meta:
         db_table = "solicitud_relleno"
@@ -68,12 +68,12 @@ class ConsultaNube(models.Model):
     sensor = models.OneToOneField(
         "sensores.Sensor", on_delete=models.PROTECT, primary_key=True, related_name="consulta_nube"
     )
-    ultima_lectura_descargada_en = models.DateTimeField(null=True)
-    ultimo_intento_en = models.DateTimeField(null=True)
-    ultimo_exito_en = models.DateTimeField(null=True)
-    ultimo_error = models.CharField(max_length=300, null=True)
+    ultima_lectura_descargada_en = models.DateTimeField(null=True, blank=True)
+    ultimo_intento_en = models.DateTimeField(null=True, blank=True)
+    ultimo_exito_en = models.DateTimeField(null=True, blank=True)
+    ultimo_error = models.CharField(max_length=300, null=True, blank=True)
     fallas_seguidas = models.IntegerField(db_default=0)
-    ultimo_recorrido_completo_en = models.DateTimeField(null=True)
+    ultimo_recorrido_completo_en = models.DateTimeField(null=True, blank=True)
 
     class Meta:
         db_table = "consulta_nube"

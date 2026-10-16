@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block titulo %}SARRCA{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/sarrca.css' %}">
   {% block cabeza %}{% endblock %}
 </head>
-<body>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
 <div class="pagina">
   <header class="encabezado">
     <a class="marca" href="/">
@@ -17,19 +18,39 @@
         <span class="marca-lema">Calidad del aire · Zacatecas y Guadalupe</span>
       </span>
     </a>
-    {% block usuario %}{% endblock %}
+    {% if user.is_authenticated %}
+    <div class="usuario">
+      <span class="usuario-datos">
+        <span class="usuario-nombre">{{ user.nombre }}</span>
+        <span class="usuario-rol">{{ user.get_rol_display }}</span>
+      </span>
+      <form method="post" action="{% url 'cuentas:salir' %}">
+        {% csrf_token %}
+        <button type="submit" class="boton">Cerrar sesión</button>
+      </form>
+    </div>
+    {% endif %}
   </header>
 
   <div class="cuerpo">
     {% block menu %}
+    {% if user.is_authenticated %}
     <nav class="menu" aria-label="Menú principal">
-      <a href="/" {% if seccion == "panel" %}aria-current="page"{% endif %}>Estado de la red</a>
+      {% if user.es_administrador %}
+      <a href="{% url 'reportes:panel_red' %}" {% if seccion == "panel" %}aria-current="page"{% endif %}>Estado de la red</a>
       <a href="/sensores/nuevo/" {% if seccion == "sensores" %}aria-current="page"{% endif %}>Sensores</a>
-      <a href="/reportes/diario/" {% if seccion == "reportes" %}aria-current="page"{% endif %}>Reportes</a>
+      <a href="{% url 'reportes:diario' %}" {% if seccion == "reportes" %}aria-current="page"{% endif %}>Reportes</a>
+      {% else %}
+      <a href="{% url 'cuentas:inicio' %}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Inicio</a>
+      {% endif %}
     </nav>
+    {% endif %}
     {% endblock %}
 
     <main class="contenido">
+      {% if messages %}
+      {% for mensaje in messages %}<div class="aviso" role="status">{{ mensaje }}</div>{% endfor %}
+      {% endif %}
       {% block contenido %}{% endblock %}
     </main>
   </div>
@@ -41,6 +62,7 @@
     </span>
   </footer>
 </div>
+<script src="{% static 'vendor/htmx/htmx.min.js' %}"></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

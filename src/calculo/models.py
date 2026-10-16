@@ -48,17 +48,21 @@ class Parametro(models.Model):
 
     tipo = models.CharField(max_length=25, choices=TipoParametro.choices)
     norma = models.CharField(max_length=30)
-    variable = models.CharField(max_length=20, null=True)
-    categoria = models.CharField(max_length=30, null=True)
-    clave = models.CharField(max_length=40, null=True)
+    variable = models.CharField(max_length=20, null=True, blank=True)
+    categoria = models.CharField(max_length=30, null=True, blank=True)
+    clave = models.CharField(max_length=40, null=True, blank=True)
     valor = models.DecimalField(max_digits=10, decimal_places=2)
-    valor_hasta = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    valor_hasta = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     unidad = models.CharField(max_length=15)
     vigente_desde = models.DateField()
-    vigente_hasta = models.DateField(null=True)
-    referencia = models.CharField(max_length=200, null=True)
+    vigente_hasta = models.DateField(null=True, blank=True)
+    referencia = models.CharField(max_length=200, null=True, blank=True)
     cargado_por = models.ForeignKey(
-        "cuentas.Cuenta", on_delete=models.PROTECT, null=True, related_name="parametros_cargados"
+        "cuentas.Cuenta",
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+        related_name="parametros_cargados",
     )
     cargado_en = models.DateTimeField(db_default=Now())
 
@@ -93,18 +97,22 @@ class ValorCalculado(models.Model):
     variable = models.CharField(max_length=10, choices=VariableCalculada.choices)
     periodo = models.CharField(max_length=10, choices=Periodo.choices)
     inicio = models.DateTimeField()
-    cobertura_min = models.DecimalField(max_digits=4, decimal_places=1, null=True)
-    lecturas_contadas = models.SmallIntegerField(null=True)
-    horas_validas = models.SmallIntegerField(null=True)
-    dias_con_medicion = models.SmallIntegerField(null=True)
-    dias_validos = models.SmallIntegerField(null=True)
-    dias_excedencia = models.SmallIntegerField(null=True)
+    cobertura_min = models.DecimalField(max_digits=4, decimal_places=1, null=True, blank=True)
+    lecturas_contadas = models.SmallIntegerField(null=True, blank=True)
+    horas_validas = models.SmallIntegerField(null=True, blank=True)
+    dias_con_medicion = models.SmallIntegerField(null=True, blank=True)
+    dias_validos = models.SmallIntegerField(null=True, blank=True)
+    dias_excedencia = models.SmallIntegerField(null=True, blank=True)
     es_valido = models.BooleanField()
-    valor = models.DecimalField(max_digits=8, decimal_places=1, null=True)
-    valor_entero = models.IntegerField(null=True)
-    excedencia = models.BooleanField(null=True)
+    valor = models.DecimalField(max_digits=8, decimal_places=1, null=True, blank=True)
+    valor_entero = models.IntegerField(null=True, blank=True)
+    excedencia = models.BooleanField(null=True, blank=True)
     parametro = models.ForeignKey(
-        Parametro, on_delete=models.PROTECT, null=True, related_name="valores_calculados"
+        Parametro,
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+        related_name="valores_calculados",
     )
     version_calculo = models.CharField(max_length=20)
     estado = models.CharField(max_length=10, choices=EstadoCalculo.choices)

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %}Iniciar sesión · SARRCA{% endblock %}
+
+{% block menu %}{% endblock %}
+
+{% block contenido %}
+<section class="tarjeta tarjeta-acceso" aria-labelledby="titulo-acceso">
+  <h1 id="titulo-acceso" class="titulo-pagina">Iniciar sesión</h1>
+  {% if mensaje %}<div class="error-formulario" role="alert">{{ mensaje }}</div>{% endif %}
+  <form method="post" action="{% url 'cuentas:entrar' %}" class="formulario" novalidate>
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ siguiente }}">
+    <label class="campo" for="{{ formulario.correo.id_for_label }}">{{ formulario.correo.label }}
+      {{ formulario.correo }}
+    </label>
+    <label class="campo" for="{{ formulario.contrasena.id_for_label }}">{{ formulario.contrasena.label }}
+      {{ formulario.contrasena }}
+    </label>
+    <button type="submit" class="boton boton-primario">Entrar</button>
+  </form>
+</section>
+{% endblock %}

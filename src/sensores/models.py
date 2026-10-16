@@ -33,8 +33,8 @@ class Colonia(models.Model):
 
     nombre = models.CharField(max_length=80)
     municipio = models.CharField(max_length=20, choices=Municipio.choices)
-    latitud_ref = models.DecimalField(max_digits=9, decimal_places=6, null=True)
-    longitud_ref = models.DecimalField(max_digits=9, decimal_places=6, null=True)
+    latitud_ref = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    longitud_ref = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
     activa = models.BooleanField(db_default=True)
     creada_en = models.DateTimeField(db_default=Now())
 
@@ -80,13 +80,13 @@ class Sensor(models.Model):
     mac_cifrada = models.TextField()
     mac_huella = models.CharField(max_length=64, unique=True)
     token_cifrado = models.TextField()
-    apodo_cifrado = models.TextField(null=True)
+    apodo_cifrado = models.TextField(null=True, blank=True)
     estado = models.CharField(
         max_length=15, choices=EstadoSensor.choices, db_default=EstadoSensor.ACTIVO
     )
     lecturas_desde = models.DateField()
     dado_de_alta_en = models.DateTimeField(db_default=Now())
-    dado_de_baja_en = models.DateTimeField(null=True)
+    dado_de_baja_en = models.DateTimeField(null=True, blank=True)
     creado_en = models.DateTimeField(db_default=Now())
     actualizado_en = models.DateTimeField(db_default=Now())
 
@@ -119,11 +119,11 @@ class Ubicacion(models.Model):
 
     sensor = models.ForeignKey(Sensor, on_delete=models.PROTECT, related_name="ubicaciones")
     colonia = models.ForeignKey(Colonia, on_delete=models.PROTECT, related_name="ubicaciones")
-    direccion = models.CharField(max_length=250, null=True)
-    latitud = models.DecimalField(max_digits=9, decimal_places=6, null=True)
-    longitud = models.DecimalField(max_digits=9, decimal_places=6, null=True)
+    direccion = models.CharField(max_length=250, null=True, blank=True)
+    latitud = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    longitud = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
     vigente_desde = models.DateTimeField()
-    vigente_hasta = models.DateTimeField(null=True)
+    vigente_hasta = models.DateTimeField(null=True, blank=True)
     registrada_por = models.ForeignKey(
         "cuentas.Cuenta", on_delete=models.PROTECT, related_name="ubicaciones_registradas"
     )
@@ -178,7 +178,7 @@ class Responsabilidad(models.Model):
     )
     inicio = models.CharField(max_length=15, choices=InicioResponsabilidad.choices)
     vigente_desde = models.DateTimeField()
-    vigente_hasta = models.DateTimeField(null=True)
+    vigente_hasta = models.DateTimeField(null=True, blank=True)
     registrada_por = models.ForeignKey(
         "cuentas.Cuenta", on_delete=models.PROTECT, related_name="responsabilidades_registradas"
     )
@@ -225,21 +225,25 @@ class VerificacionSensor(models.Model):
     )
     datos_alta = models.JSONField()
     sensor_existente = models.ForeignKey(
-        Sensor, on_delete=models.PROTECT, null=True, related_name="verificaciones_de_reactivacion"
+        Sensor,
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+        related_name="verificaciones_de_reactivacion",
     )
-    token_cifrado = models.TextField(null=True)
-    apodo_cifrado = models.TextField(null=True)
-    ultima_lectura_en = models.DateTimeField(null=True)
-    ultima_lectura_resumen = models.JSONField(null=True)
-    nube_conserva_desde = models.DateTimeField(null=True)
+    token_cifrado = models.TextField(null=True, blank=True)
+    apodo_cifrado = models.TextField(null=True, blank=True)
+    ultima_lectura_en = models.DateTimeField(null=True, blank=True)
+    ultima_lectura_resumen = models.JSONField(null=True, blank=True)
+    nube_conserva_desde = models.DateTimeField(null=True, blank=True)
     solicitada_por = models.ForeignKey(
         "cuentas.Cuenta", on_delete=models.PROTECT, related_name="verificaciones_solicitadas"
     )
     solicitada_en = models.DateTimeField(db_default=Now())
-    tomada_en = models.DateTimeField(null=True)
-    terminada_en = models.DateTimeField(null=True)
+    tomada_en = models.DateTimeField(null=True, blank=True)
+    terminada_en = models.DateTimeField(null=True, blank=True)
     sensor = models.ForeignKey(
-        Sensor, on_delete=models.PROTECT, null=True, related_name="verificaciones"
+        Sensor, on_delete=models.PROTECT, null=True, blank=True, related_name="verificaciones"
     )
 
     class Meta:
