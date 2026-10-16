@@ -6,7 +6,7 @@ from calculo.models import MarcaRecalculo
 from lecturas.models import Lectura
 from recepcion.adapters.archivo import FuenteDeArchivo
 from recepcion.models import ConsultaNube
-from recepcion.ports import FuenteNoDisponible
+from recepcion.ports import FuenteNoDisponible, SensorConsultado
 from recepcion.services import (
     Lector,
     Presupuesto,
@@ -208,3 +208,23 @@ def test_el_worker_registra_las_tareas_de_la_recepcion():
     }
     assert all(t.executor == "recepcion" for t in tareas.values())
     assert str(tareas["historial_diario"].trigger) == "cron[hour='2', minute='10']"
+
+
+def test_con_la_fecha_fija_la_muestra_cae_siempre_en_las_mismas_horas(monkeypatch, sensor):
+    from recepcion.services import fuente_configurada
+
+    monkeypatch.setenv("SARRCA_FUENTE", "archivo")
+    monkeypatch.setenv("SARRCA_FUENTE_ARCHIVO_FIN", "2026-10-16T09:00")
+    consultado = SensorConsultado(id=sensor.pk, mac=MAC, token="archivo")
+    primera = fuente_configurada().historial(consultado, 1, 5)
+    segunda = fuente_configurada().historial(consultado, 1, 5)
+    assert [x.hora_local for x in primera] == [x.hora_local for x in segunda]
+    assert primera[0].hora_local <= datetime(2026, 10, 16, 9, 0)
+
+
+def test_sin_fuente_configurada_se_usa_la_nube(monkeypatch):
+    from recepcion.adapters.ezdata import FuenteEzData
+    from recepcion.services import fuente_configurada
+
+    monkeypatch.delenv("SARRCA_FUENTE", raising=False)
+    assert isinstance(fuente_configurada(), FuenteEzData)

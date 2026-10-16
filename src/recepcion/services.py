@@ -33,6 +33,7 @@ from sensores.models import EstadoSensor, Sensor
 logger = logging.getLogger("recepcion")
 
 VARIABLE_FUENTE = "SARRCA_FUENTE"
+VARIABLE_FIN_ARCHIVO = "SARRCA_FUENTE_ARCHIVO_FIN"
 
 TAMANO_SONDEO = 5
 TAMANO_HISTORIAL = 50
@@ -50,12 +51,15 @@ YA_ESTABAN = {Resultado.REPETIDA, Resultado.COPIA_IDENTICA}
 def fuente_configurada() -> FuenteDeLecturas:
     """La nube real, o la muestra en archivo si `SARRCA_FUENTE=archivo` (pruebas y demo).
 
-    Con el archivo, las horas se recorren para que la muestra termine en este momento.
+    Con el archivo, las horas se recorren para que la muestra termine en
+    `SARRCA_FUENTE_ARCHIVO_FIN` (fecha y hora local, `2026-10-16T09:00`) o, si no está, en este
+    momento. Con la fecha fija, reiniciar el worker no vuelve a guardar la muestra en otras horas.
     """
     if os.environ.get(VARIABLE_FUENTE, "ezdata").strip().lower() == "archivo":
         from recepcion.adapters.archivo import FuenteDeArchivo
 
-        return FuenteDeArchivo(terminar_en=timezone.now())
+        fin = os.environ.get(VARIABLE_FIN_ARCHIVO, "").strip()
+        return FuenteDeArchivo(terminar_en=datetime.fromisoformat(fin) if fin else timezone.now())
     from recepcion.adapters.ezdata import FuenteEzData
 
     return FuenteEzData()

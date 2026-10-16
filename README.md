@@ -34,7 +34,7 @@ Lo que **no** va todavía (ni el código ni sus tablas): bitácora, monitoreo de
 | Tareas en segundo plano | APScheduler, en un contenedor aparte (`worker`) |
 | Cifrado | `cryptography` (Fernet) |
 | Contenedores | Docker Compose |
-| Calidad | pytest, ruff, import-linter y GitHub Actions |
+| Calidad | pytest y ruff, que cada quien corre antes de abrir su PR (la integración continua llega después) |
 
 ---
 
@@ -77,11 +77,13 @@ Hay dos excepciones a propósito:
 - **`calculo/dominio/`** es Python puro, **sin Django y sin base de datos**. Ahí van las reglas de la norma (hora válida, concentración horaria, promedio de 24 h, excedencias, promedio mensual). Así se pueden probar solitas contra el cálculo a mano.
 - **`recepcion/ports.py` + `recepcion/adapters/`**: EzData no tiene documentación y puede cambiar cuando quiera, entonces el resto del sistema habla con una interfaz (`FuenteDeLecturas`) y solo `adapters/ezdata.py` sabe cómo responde la nube. Para pruebas hay otra fuente que lee de un archivo.
 
-import-linter revisa en cada PR que:
+En cada PR se revisa a mano que:
 
 1. ningún módulo importe `reportes`,
 2. solo `recepcion.adapters` sepa de EzData,
 3. `calculo.dominio` no importe Django.
+
+(Después lo revisará solo import-linter, cuando haya integración continua.)
 
 ### Cosas que hay que respetar sí o sí
 
@@ -108,9 +110,9 @@ Traviesos.py/
 ├── Dockerfile                   # una sola imagen para web y worker
 ├── .env.example                 # nombres de las variables, sin valores
 ├── requirements.txt
-├── pyproject.toml               # ruff, pytest (pythonpath = ["src"]) e import-linter
+├── pyproject.toml               # ruff y pytest (pythonpath = ["src"])
 ├── manage.py
-├── .github/workflows/ci.yml     # pruebas, ruff e import-linter en cada PR
+├── .github/workflows/ci.yml     # (después) pruebas y ruff en cada PR
 │
 ├── config/                      # settings.py, urls.py, wsgi.py
 │
@@ -171,23 +173,59 @@ Si no saben en qué módulo va algo, pregunten antes de crear el archivo.
 
 ## Instalación
 
-Necesitas Docker Desktop (o Docker con Compose) y, para correr las pruebas desde tu máquina, Python 3.12 o más nuevo.
+Necesitas Docker Desktop (o Docker con Compose) y, para correr las pruebas desde tu máquina, Python 3.12 o más nuevo. Los comandos son para PowerShell; en Linux o Mac cambia `copy` por `cp`.
 
-```bash
-cp .env.example .env      # y llena DJANGO_SECRET_KEY, SARRCA_DB_CONTRASENA y SARRCA_CLAVE_SECRETOS
-docker compose up -d --build
-docker compose exec web python manage.py migrate
-docker compose exec web python manage.py crear_admin
-docker compose exec web python manage.py precargar_cuentas
-```
+1. **El `.env`.** Copia el ejemplo y llénalo:
 
-La web queda en http://127.0.0.1:8000/. Con `docker compose logs -f worker` ves qué está haciendo el proceso de fondo.
+   ```bash
+   copy .env.example .env
+   ```
 
-Para generar la clave de cifrado:
+   Llena `DJANGO_SECRET_KEY` (cualquier texto largo y secreto), `SARRCA_DB_CONTRASENA` (la contraseña que tendrá la base) y `SARRCA_CLAVE_SECRETOS`, que se genera así:
 
-```bash
-python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
-```
+   ```bash
+   python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+   ```
+
+   `SARRCA_FUENTE` dice de dónde lee el worker las lecturas: `ezdata` es la nube de M5Stack y `archivo` es una muestra guardada de un sensor real, para probar sin depender de que un sensor transmita.
+   Con `archivo`, pon también en `SARRCA_FUENTE_ARCHIVO_FIN` la fecha y hora de hoy (por ejemplo, `2026-10-16T09:00`): la muestra se acomoda para terminar ahí y, aunque reinicies el worker, cae siempre en las mismas horas.
+
+2. **Levantar la base y la web** (la primera vez tarda unos minutos):
+
+   ```bash
+   docker compose up -d --build db web
+   ```
+
+3. **Preparar la base**, en este orden:
+
+   ```bash
+   docker compose exec web python manage.py migrate
+   docker compose exec web python manage.py loaddata colonias
+   docker compose exec web python manage.py crear_admin --correo tu-correo@ejemplo.mx --nombre "Tu nombre"
+   ```
+
+   - `migrate` crea las tablas y carga los límites de la NOM-025.
+   - `loaddata colonias` carga el catálogo de colonias de Zacatecas y Guadalupe. Sin él no se puede registrar ningún sensor.
+   - `crear_admin` crea la cuenta de la Administradora y te pide su contraseña dos veces (mínimo 8 caracteres).
+
+4. **Las cuentas de los vecinos responsables.** Se cargan desde un CSV con las columnas `correo,nombre,municipio,colonia`. El de verdad lleva datos personales y nunca se sube al repositorio; para probar está `tests/datos/precarga_cuentas_ejemplo.csv`. La contraseña inicial de esas cuentas sale de `SARRCA_PRECARGA_CONTRASENA` (sin ella, las cuentas se crean pero no pueden entrar):
+
+   ```bash
+   docker compose exec -e SARRCA_PRECARGA_CONTRASENA=una-contraseña-de-prueba web python manage.py precargar_cuentas tests/datos/precarga_cuentas_ejemplo.csv
+   ```
+
+5. **Arrancar el proceso de fondo**, ya con la base lista:
+
+   ```bash
+   docker compose up -d worker
+   docker compose logs worker
+   ```
+
+   Debe decir «Worker iniciado con 9 tareas».
+
+6. **Listo.** La web queda en http://127.0.0.1:8000/. Entra con la cuenta de Administradora, registra un sensor en **Sensores** y en unos segundos aparece el resumen para confirmarlo. Con `docker compose logs -f worker` ves qué está haciendo el proceso de fondo.
+
+Si cambias `SARRCA_FUENTE` en el `.env`, reinicia el worker: `docker compose up -d worker`.
 
 ### Pruebas
 
