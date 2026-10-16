@@ -1,0 +1,54 @@
+# Producción: se usa junto con docker-compose.yml, en el servidor.
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+#
+# Cambia lo de desarrollo: la web corre con gunicorn y sin el código montado, la base y la web no
+# se publican, y Caddy queda delante con HTTPS (solo los puertos 80 y 443) sirviendo los estáticos.
+
+x-logs: &logs
+  logging:
+    driver: json-file
+    options:
+      max-size: "10m"
+      max-file: "3"
+
+services:
+  db:
+    <<: *logs
+    ports: !reset []
+
+  web:
+    <<: *logs
+    command:
+      - sh
+      - -c
+      - python manage.py collectstatic --noinput && gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3
+    ports: !reset []
+    volumes: !override
+      - estaticos:/app/staticfiles
+
+  worker:
+    <<: *logs
+    volumes: !reset []
+
+  caddy:
+    <<: *logs
+    image: caddy:2.10
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SARRCA_DOMINIO: ${SARRCA_DOMINIO:?Falta SARRCA_DOMINIO en el .env}
+      TZ: America/Mexico_City
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - estaticos:/srv/static:ro
+      - caddy_datos:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+
+volumes:
+  estaticos:
+  caddy_datos:
+  caddy_config:

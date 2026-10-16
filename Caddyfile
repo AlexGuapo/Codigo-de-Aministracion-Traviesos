@@ -1,0 +1,13 @@
+# HTTPS automático con Let's Encrypt para el dominio del .env (SARRCA_DOMINIO).
+# Los estáticos los sirve Caddy; todo lo demás va a la web (gunicorn).
+
+{$SARRCA_DOMINIO} {
+	encode gzip
+
+	handle_path /static/* {
+		root * /srv/static
+		file_server
+	}
+
+	reverse_proxy web:8000
+}
